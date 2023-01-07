@@ -1,112 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="true">
 
-    <head>
-        <meta charset="utf-8">
-        <link rel="preconnect" href="https://fonts.gstatic.com/"/>
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Mingzat">
-        <title>Chimeraland Pet/Attendant EXP Calculator</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="../petCalc/css/petCalc.css">
-        <script src="https://kit.fontawesome.com/d55c924e33.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Mingzat">
+    <title>Chimeraland Pet/Attendant EXP Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../petCalc/css/petCalc.css">
+    <script src="https://kit.fontawesome.com/d55c924e33.js" crossorigin="anonymous"></script>
+</head>
 
-    <body>
-        <nav class="navbar navbar-expand-md navbar-dark">
-            <a class="navbar-brand" href="../index.html">&nbsp;&nbsp;Home</a>
-            </nav>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="../index.html">&nbsp;&nbsp;Home</a>
+    </nav>
 
 
 
-        <div class="title-container container">
-            <h1 class="title" id="pagetitle">Chimeraland Pet Exp Calculator</h1>
-        </div>
+    <div class="title-container container">
+        <h1 class="title" id="pagetitle">Chimeraland Pet Exp Calculator</h1>
+    </div>
 
-        <br>
-        <main class="content-container container border-dark">
-            <section class="container text-nowrap" id="calculator-container">
-                <div class="main-content userInputForm">
-                    <label class="form-label" for="level">
-                        Pet Lv.
-                        <input class="input border-warning box-shadow form-control" id="level" onchange="limiter (this)" oninput="calcExp()" onclick="this.select();" type="number" value="1" min="1" onblur="if(this.value==''){this.value=1;}" required/>
-                    </label>
-                </div>
-                <div class="main-content userInputForm">
-                    <label class="form-label" for="currentExp">
-                        Exp
-                        <input class="input border-warning box-shadow form-control" id="currentExp" oninput="calcExp()" onclick="this.select();" type="number" value="0" min="0" onblur="if(this.value==''){this.value=0;calcExp()}"/>
-                    </label>
-                </div>
-                <div class="main-content userInputForm">
-                    <label class="form-label" for="levelGoal">
-                        Goal Lv.
-                        <input class="input border-warning box-shadow form-control" id="levelGoal" onchange="limiter (this)" oninput="calcExp()" onclick="this.select();" type="number" value="21" min="2" onblur="if(this.value==''){this.value=2;}" required/>
-                    </label>
-                </div>
-                <div class="results-text-container">
-                    <ul class="results-text">
-                        <li>
-                            <span>
-                                <output id="expNeededText">17,065</output> EXP
-                            </span>
-                        </li>
-                        <li class="pill-text-container" id="purity-result">
-                            <output id="purity-needed" class="pill-text">0</output>
-                            <span class="pill-result" id="purity-result-text">Purity</span>
-                        </li>
-                        <li class="pill-text-container" id="skycharge-result">
-                            <output id="skycharge-needed" class="pill-text">0</output>
-                            <span class="pill-result" id="skycharge-result-text">Skycharge</span>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+    <br>
+    <main class="content-container container border-dark">
+        <section class="container text-nowrap" id="calculator-container">
+            <div class="main-content userInputForm">
+                <label class="form-label" for="level">
+                    Pet Lv.
+                    <input class="input border-warning box-shadow form-control" id="level" onchange="limiter (this)"
+                           oninput="calcExp()" onclick="this.select();" type="number" value="1" min="1"
+                           onblur="if(this.value==''){this.value=1;}" required />
+                </label>
+            </div>
+            <div class="main-content userInputForm">
+                <label class="form-label" for="currentExp">
+                    Exp
+                    <input class="input border-warning box-shadow form-control" id="currentExp" oninput="calcExp()"
+                           onclick="this.select();" type="number" value="0" min="0"
+                           onblur="if(this.value==''){this.value=0;calcExp()}" />
+                </label>
+            </div>
+            <div class="main-content userInputForm">
+                <label class="form-label" for="levelGoal">
+                    Goal Lv.
+                    <input class="input border-warning box-shadow form-control" id="levelGoal" onchange="limiter (this)"
+                           oninput="calcExp()" onclick="this.select();" type="number" value="21" min="2"
+                           onblur="if(this.value==''){this.value=2;}" required />
+                </label>
+            </div>
+            <div class="results-text-container">
+                <ul class="results-text">
+                    <li>
+                        <span>
+                            <output id="expNeededText">17,065</output> EXP
+                        </span>
+                    </li>
+                    <li class="pill-text-container" id="purity-result">
+                        <output id="purity-needed" class="pill-text">0</output>
+                        <span class="pill-result" id="purity-result-text">Purity</span>
+                    </li>
+                    <li class="pill-text-container" id="skycharge-result">
+                        <output id="skycharge-needed" class="pill-text">0</output>
+                        <span class="pill-result" id="skycharge-result-text">Skycharge</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-            <section class="notice-container box-shadow margin-left">
-                <aside id="breakpoints-info-container box-shadow">
-                    <h2 class="bold center">Pill Breakpoints</h2>
-                    <ul>
-                        <li>
-                            <span class="bold larger-font color-1">To 21:</span><br class="hiddenbr">
-                            <span class="sm-padding-left">1 Skycharge</span>
-                        </li>
-                        <li class="sm-margin-top">
-                            <span class="bold larger-font color-1">To 41:</span><br class="hiddenbr">
-                            <span class="sm-padding-left">6 Purity, 1 Skycharge</span>
-                        </li>
-                        <li class="sm-margin-top">
-                            <span class="bold larger-font color-1">To 61:</span><br class="hiddenbr">
-                            <span class="sm-padding-left">86 Purity, 1 Skycharge</span>
-                        </li>
-                    </ul>
-                </aside>
-            </section>
+        <section class="notice-container box-shadow margin-left">
+            <aside id="breakpoints-info-container box-shadow">
+                <h2 class="bold center">Pill Breakpoints</h2>
+                <ul>
+                    <li>
+                        <span class="bold larger-font color-1">To 21:</span><br class="hiddenbr">
+                        <span class="sm-padding-left">1 Skycharge</span>
+                    </li>
+                    <li class="sm-margin-top">
+                        <span class="bold larger-font color-1">To 41:</span><br class="hiddenbr">
+                        <span class="sm-padding-left">6 Purity, 1 Skycharge</span>
+                    </li>
+                    <li class="sm-margin-top">
+                        <span class="bold larger-font color-1">To 61:</span><br class="hiddenbr">
+                        <span class="sm-padding-left">86 Purity, 1 Skycharge</span>
+                    </li>
+                </ul>
+            </aside>
+        </section>
 
-            <!-- Crediting players who contributed to data collection -->
-            <details class="info-container width-limit40">
-                <summary>
-                    <img src="../petCalc/img/info.png" alt="" class="info box-shadow"/>
-                    <span class="credits">Credits</span>
-                </summary>
-                <hr>
-                <p class="notes">Created by
-                    <span class="bold">Fox</span>
-                    from
-                    <b>301PhoenixBay</b>
-                    <br><br>Special thanks for data collection:<br>
-                    <b>Micha</b>,
-                    <b>Annalae</b>, and
-                    <b>Hammerhead</b><br>
-                </p>
-            </details>
-        </main>
-        <footer>
-            <script src="../petCalc/js/calcExp.js" async></script>
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        </footer>
-    </body>
+        <!-- Crediting players who contributed to data collection -->
+        <details class="info-container width-limit40">
+            <summary>
+                <img src="../petCalc/img/info.png" alt="" class="info box-shadow" />
+                <span class="credits">Credits</span>
+            </summary>
+            <hr>
+            <p class="notes">Created by
+                <span class="bold">Fox</span>
+                from
+                <b>301PhoenixBay</b>
+                <br><br>Special thanks for data collection:<br>
+                <b>Micha</b>,
+                <b>Annalae</b>, and
+                <b>Hammerhead</b><br>
+            </p>
+        </details>
+    </main>
+    <footer>
+        <script src="../petCalc/js/calcExp.js" async></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+    </footer>
+</body>
+
 </html>

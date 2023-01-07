@@ -3,8 +3,8 @@ html {
 }
 
 body {
-  font-family: Mingzat, Georgia, "Times New Roman", Times, serif;
-  background: url("../petCalc/img/chimera.png");
+  font-family: Mingzat, "Book Antiqua", "Malgun Gothic";
+  background: url("/petCalc/img/chimera.png");
   background-position: 49vw 22vh;
   text-shadow: 4px 4px 8px #000;
   background-repeat: no-repeat;
@@ -176,6 +176,7 @@ li {
 
 .info {
   border: 2px solid rgba(0, 0, 0, 0.397);
+  background-color: #D6D6D6;
   max-height: 24px;
   max-width: 24px;
   cursor: pointer;
