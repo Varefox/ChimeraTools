@@ -1,0 +1,112 @@
+<style>
+    .navbar {
+    overflow: hidden;
+    background-color: #333;
+    color: white;
+}
+
+.nav {
+    float: left;
+    overflow: hidden;
+}
+
+.nav .navbtn {
+    font-size: 13px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a {
+    float: left;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.nav:hover .navbtn {
+    background-color: rgb(167, 185, 54);
+}
+
+.subNav {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: rgb(2, 34, 37);
+    width: 100%;
+    z-index: 1;
+}
+
+.subNav a {
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+.subNav a:hover {
+    background-color: #eee;
+    color: black;
+}
+
+.nav:hover .subNav {
+    display: block;
+}
+</style>
+
+
+<div class='navbar'>
+    <a href='https://varefox.github.io/ChimeraTools/'>Home</a>
+    <div class='nav'>
+        <button type='menu' class='navbtn'>Tools <i class='fa fa-caret-down'>
+        </i>
+        </button>
+        <div class='subNav'>
+            <a href='/ChimeraTools/petcalc.html'>Pet EXP Calculator</a>
+            <a href='#recipeplan'>Recipe Planner</a>
+            <a href='#craftplan'><s>Artisan's Daybook</s>
+            </a>
+        </div>
+    </div>
+    <div class='nav'>
+        <button type='menu' class='navbtn'>Guides <i class='fa fa-caret-down'>
+        </i>
+        </button>
+        <div class='subNav'>
+            <a href='ChimeraTools/guides/raisingmer.html'>Merfolk (incomplete)</a>
+            <a href='#raisepets'><s>Mounts & Attendants</s>
+            </a>
+            <a href='#bosses'><s>Boss Fight Mechanics</s>
+            </a>
+            <a href='#dailies'><s>Dailies and Rewards</s>
+            </a>
+            <a href='#tips'><s>General Tips</s>
+            </a>
+        </div>
+    </div>
+    <div class='nav'>
+        <button type='menu' class='navbtn'><s>Other Resources</s> <i class='fa fa-caret-down'>
+        </i>
+        </button>
+        <div class='subNav'>
+            <a href='#link1'>Link 1</a>
+            <a href='#link2'>Link 2</a>
+            <a href='#link3'>Link 3</a>
+            <a href='#link4'>Link 4</a>
+        </div>
+    </div>
+    <div class='nav'>
+        <button type='menu' class='navbtn'>Contact Fox <i class='fa fa-caret-down'></i></button>
+        <div class='subNav'>
+            <a href='mailto:varefox@gmail.com'><i class='fa fa-envelope'></i> varefox@gmail.com</a>
+            <a href='#'><iconify-icon icon='fa-brands:discord'></iconify-icon> Fox-- #2568</a>
+            <a href='#'>In Game - Fox</a>
+        </div>
+    </div>
+</div>

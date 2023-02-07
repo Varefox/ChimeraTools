@@ -1,0 +1,8 @@
+template.html
+assets/sabretooth.png
+assets/thankyou.png
+.vscode/**
+_config.yml
+node_modules
+_site
+.jekyll-cache

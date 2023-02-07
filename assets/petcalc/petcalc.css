@@ -1,0 +1,221 @@
+html {
+  overflow-y: scroll;
+  background: repeating-linear-gradient(7deg, #000010, #212c26, #000010);
+}
+
+body {
+  font-family: Mingzat, "Book Antiqua", "Malgun Gothic";
+  background: rgba(0, 0, 0, 0);
+  background-image: url("/ChimeraTools/assets/petcalc/img/chimera.png");
+  background-position: 53vw 22vh;
+  text-shadow: 4px 4px 8px #000;
+  background-repeat: no-repeat;
+  background-size: 45vw;
+  font-size: 1.05em;
+  color: #F3F7F0;
+  padding-bottom: 90px;
+  max-height: auto;
+  overflow: hidden;
+}
+
+.color-1 {
+  color: #EEB34B;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.sm-margin-top {
+  margin-top: 2vh;
+}
+
+.width-limit40 {
+  max-width: 40vw;
+}
+
+.larger-font {
+  font-size: 1.2em;
+}
+
+.box-shadow {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+img {
+  vertical-align: middle;
+  line-height: normal;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  padding: 1% 1% 0% 1%;
+  position: relative;
+  font-size: 1.6em;
+  max-width: 80vw;
+  left: 9vw;
+  top: -1%;
+}
+
+.main-content {
+  margin: 0% 2%;
+}
+
+.results-text-container {
+background:rgba(0, 0, 0, 0.06);
+max-width: 40vw;
+font-size: 1.1em;
+}
+
+details {
+  position: absolute;
+  right: 55vw;
+  top: 22vh;
+}
+
+summary {
+  list-style-type: none;
+}
+
+.notes {
+  font-size: 0.9em;
+}
+
+b {
+  font-size: 1em;
+}
+
+.pill-text-container {
+  max-width: 13vw;
+  display: inline;
+  font-size: 1em;
+  margin: 0 3%;
+}
+
+.pill-text {
+  color: rgba(208, 85, 79, 0.845);
+  margin-right: 2%;
+}
+
+input[type=number] {
+  border: 1px solid #ccc;
+  background-color: #dfe8d8;
+  border-radius: 4px;
+  font-size: 1.1em;
+  text-align: end;
+  height: 1.4em;
+  width: 8%;
+}
+
+.notice-container {
+  background-color: rgba(15, 29, 50, 0.545);
+  position: relative;
+  line-height: 135%;
+  border-radius: 2%;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: auto;
+  margin: 6vw;
+  padding: 15px 40px 1px 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.info {
+  border: 2px solid rgba(0, 0, 0, 0.397);
+  background-color: rgb(255, 255, 255, .8);
+  border-radius: 20px;
+  max-height: 34px;
+  max-width: 34px;
+  cursor: pointer;
+  margin: 0 2px;
+  height: 34px;
+  width: 34px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.email-link {
+  text-decoration: unset;
+  color:rgba(240, 240, 36, 0.845)
+}
+
+details[open] {
+  border: 2px solid rgba(240, 240, 36, 0.845);
+  border-radius: 2%;
+  background-color: rgba(21, 32, 74, 0.85);
+  max-width: max-content;
+  padding: 10px;
+  -webkit-border-radius: 2%;
+  -moz-border-radius: 2%;
+  -ms-border-radius: 2%;
+  -o-border-radius: 2%;
+}
+
+
+#expNeededText {
+  font-size: 1em;
+}
+
+.hiddenbr {
+  display: none;
+}
+.hover-link:hover {
+  background-color:rgba(92, 220, 224, 0.987);
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    font-size: 0.8em;
+    
+  }
+  .title {
+max-width: 95%;
+min-width: fit-content;
+margin-left: -20px;
+}
+
+
+.hiddenbr {
+    display: initial;
+  }
+  
+  .notice-container {
+    max-width: 30vw;
+    min-width: fit-content;
+  }
+  .larger-font {
+    font-size: 1em;
+  }
+  .smaller-font {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  details {
+    position: unset;
+    display: unset;
+  }
+}
+
+.directionswrapper {
+  font-size: 1.4em;
+}
+h2 {
+  color: white;
+  margin-left: 160px;
+}
