@@ -36,7 +36,7 @@ When team fills, all members should post how many of each dew they have.
 
 ## Process
 
-<iframe width="60%" height="60%" src="https://www.youtube.com/embed/csEuFFktY-w" frameborder="0" allowfullscreen></iframe>
+<iframe width="70%" height="80%" src="https://www.youtube.com/embed/csEuFFktY-w" frameborder="0" allowfullscreen></iframe>
 
 
 ### Team Leader
