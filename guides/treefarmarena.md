@@ -7,6 +7,10 @@ title: Tree Farm Arena Guide
 padding-left: 14%;
 padding-right: 16%;
 }
+#player {
+height: 60%;
+width: 60%;
+}
 </style>
 
 # Tree Farming Arena Guide
@@ -36,7 +40,7 @@ When team fills, all members should post how many of each dew they have.
 
 ## Process
 
-<iframe width="70%" height="80%" src="https://www.youtube.com/embed/csEuFFktY-w" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/csEuFFktY-w" frameborder="0" allowfullscreen></iframe>
 
 
 ### Team Leader
