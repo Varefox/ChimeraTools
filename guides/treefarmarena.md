@@ -7,10 +7,6 @@ title: Tree Farm Arena Guide
 padding-left: 14%;
 padding-right: 16%;
 }
-
-iframe  {
-    padding: unset;
-}
 </style>
 
 # Tree Farming Arena Guide
