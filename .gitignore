@@ -6,3 +6,4 @@ _config.yml
 node_modules
 _site
 .jekyll-cache
+cookbook/

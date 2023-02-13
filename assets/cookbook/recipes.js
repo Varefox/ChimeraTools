@@ -14,7 +14,7 @@ const recipeList = [
         "name": "Ice Block",
         "src": "assets/cookbook/recipeimgs/common/image15.png",
         "tier": 1,
-        "ingredients": ["Ice Cube", "Ice Cube"],
+        "ingredients": ["Ice Piece", "Ice Piece"],
         "fullness": 180,
         "effects": {
             "heatResist": 10
@@ -45,9 +45,9 @@ const recipeList = [
     },
     {
         "name": "Slushie",
-        "src": "assets/cookbook/recipeimgs/common/image6.png",
+        "src": "assets/cookbook/recipeimgs/common/image63.png",
         "tier": 1,
-        "ingredients": ["Ice Cube", "Wild Fruit"],
+        "ingredients": ["Ice Piece", "Wild Fruit"],
         "fullness": 180,
         "effects": {
             "heatResist": 10
@@ -56,9 +56,9 @@ const recipeList = [
     },
     {
         "name": "Apple Slushie",
-        "src": "assets/cookbook/recipeimgs/common/image4.png",
+        "src": "assets/cookbook/recipeimgs/common/image63.png",
         "tier": 1,
-        "ingredients": ["Ice Cube", "Apple"],
+        "ingredients": ["Ice Piece", "Apple"],
         "fullness": 180,
         "effects": {
             "heatResist": 10
@@ -67,9 +67,9 @@ const recipeList = [
     },
     {
         "name": "Goodfruit Slushie",
-        "src": "assets/cookbook/recipeimgs/common/image14.png",
+        "src": "assets/cookbook/recipeimgs/common/image63.png",
         "tier": 1,
-        "ingredients": ["Ice Cube", "Red Goodfruit"],
+        "ingredients": ["Ice Piece", "Red Goodfruit"],
         "fullness": 180,
         "effects": {
             "heatResist": 10
@@ -78,9 +78,9 @@ const recipeList = [
     },
     {
         "name": "Verdura Slushie",
-        "src": "assets/cookbook/recipeimgs/common/image1.png",
+        "src": "assets/cookbook/recipeimgs/common/image63.png",
         "tier": 1,
-        "ingredients": ["Ice Cube", "Bodhi Fruit"],
+        "ingredients": ["Ice Piece", "Bodhi Fruit"],
         "fullness": 180,
         "effects": {
             "heatResist": 10
@@ -89,9 +89,9 @@ const recipeList = [
     },
     {
         "name": "Sea-Buckthorn Slushie",
-        "src": "assets/cookbook/recipeimgs/common/image10.png",
+        "src": "assets/cookbook/recipeimgs/common/image63.png",
         "tier": 1,
-        "ingredients": ["Ice Cube", "Sea-Buckthorn"],
+        "ingredients": ["Ice Piece", "Sea-Buckthorn"],
         "fullness": 180,
         "effects": {
             "heatResist": 10
@@ -168,7 +168,7 @@ const recipeList = [
     },
     {
         "name": "Wormy Soup",
-        "src": "assets/cookbook/recipeimgs/common/image5.png",
+        "src": "assets/cookbook/recipeimgs/common/image42.png",
         "tier": 1,
         "ingredients": ["Insect Ichor"],
         "fullness": 240,
@@ -176,7 +176,7 @@ const recipeList = [
     },
     {
         "name": "Hot Water",
-        "src": "assets/cookbook/recipeimgs/common/image5.png",
+        "src": "assets/cookbook/recipeimgs/common/image53.png",
         "tier": 1,
         "ingredients": ["Water"],
         "fullness": 60,
@@ -187,7 +187,7 @@ const recipeList = [
     },
     {
         "name": "Job's Tears Porridge",
-        "src": "assets/cookbook/recipeimgs/common/image5.png",
+        "src": "assets/cookbook/recipeimgs/common/image64.png",
         "tier": 1,
         "ingredients": ["Job's Tears", "Water"],
         "fullness": 180,
@@ -198,7 +198,7 @@ const recipeList = [
     },
     {
         "name": "Spicy Red Goodfruit Soup",
-        "src": "assets/cookbook/recipeimgs/common/image2.png",
+        "src": "assets/cookbook/recipeimgs/common/image56.png",
         "tier": 1,
         "ingredients": ["Red Goodfruit", "Water"],
         "fullness": 180,
@@ -209,9 +209,9 @@ const recipeList = [
     },
     {
         "name": "Cold Lime Soup",
-        "src": "assets/cookbook/recipeimgs/common/image3.png",
+        "src": "assets/cookbook/recipeimgs/common/image42.png",
         "tier": 1,
-        "ingredients": ["Bodhi Fruit", "Ice Cube"],
+        "ingredients": ["Bodhi Fruit", "Ice Piece"],
         "fullness": 180,
         "effects": {
             "heatResist": 10
@@ -220,7 +220,7 @@ const recipeList = [
     },
     {
         "name": "Orchid Soup",
-        "src": "assets/cookbook/recipeimgs/common/image18.png",
+        "src": "assets/cookbook/recipeimgs/common/image16.png",
         "tier": 1,
         "ingredients": ["Orchid", "Water", "Wild Fruit"],
         "fullness": 180,
@@ -231,14 +231,14 @@ const recipeList = [
     },
     {
         "name": "Large Fruit Stew",
-        "src": "assets/cookbook/recipeimgs/common/image5.png",
+        "src": "assets/cookbook/recipeimgs/common/image18.png",
         "tier": 1,
         "ingredients": ["Produce", "Water"],
         "fullness": 240,
         "craft": "Stove Lv. 1 or 2\nCamp Lv. 1 or 2"
     },
     {
-        "name": "Braised Meat Cubes",
+        "name": "Braised Meat Pieces",
         "src": "assets/cookbook/recipeimgs/common/image12.png",
         "tier": 1,
         "ingredients": ["Meat", "Water"],
@@ -255,15 +255,15 @@ const recipeList = [
     },
     {
         "name": "Grilled Rabbit",
-        "src": "assets/cookbook/recipeimgs/common/image5.png",
+        "src": "assets/cookbook/recipeimgs/common/image34.png",
         "tier": 1,
         "ingredients": ["Meat", "Meat"],
         "fullness": 180,
         "craft": "Stove Lv. 1 or 2\nCamp Lv. 1 or 2"
     },
     {
-        "name": "Grilled Meat Cubes",
-        "src": "assets/cookbook/recipeimgs/common/image21.png",
+        "name": "Grilled Meat Pieces",
+        "src": "assets/cookbook/recipeimgs/common/image34.png",
         "tier": 1,
         "ingredients": ["Meat", "Meat"],
         "fullness": 180,
@@ -271,7 +271,7 @@ const recipeList = [
     },
     {
         "name": "Grilled Frog Legs",
-        "src": "assets/cookbook/recipeimgs/common/image16.png",
+        "src": "assets/cookbook/recipeimgs/common/image34.png",
         "tier": 1,
         "ingredients": ["Small Beast Meat", "Small Beast Meat", "Small Beast Meat"],
         "fullness": 240,
@@ -282,7 +282,7 @@ const recipeList = [
     },
     {
         "name": "Grilled Venison",
-        "src": "assets/cookbook/recipeimgs/common/image28.png",
+        "src": "assets/cookbook/recipeimgs/common/image34.png",
         "tier": 1,
         "ingredients": ["Moose Meat", "Moose Meat"],
         "fullness": 240,
@@ -290,7 +290,7 @@ const recipeList = [
     },
     {
         "name": "Chargrilled Skewers",
-        "src": "assets/cookbook/recipeimgs/common/image26.png",
+        "src": "assets/cookbook/recipeimgs/common/image5.png",
         "tier": 1,
         "ingredients": ["Meat", "Meat"],
         "fullness": 240,
@@ -298,7 +298,7 @@ const recipeList = [
     },
     {
         "name": "Fruity Meat Skewers",
-        "src": "assets/cookbook/recipeimgs/common/image23.png",
+        "src": "assets/cookbook/recipeimgs/common/image5.png",
         "tier": 1,
         "ingredients": ["Meat", "Wild Fruit"],
         "fullness": 240,
@@ -306,7 +306,7 @@ const recipeList = [
     },
     {
         "name": "Grilled Mushrooms",
-        "src": "assets/cookbook/recipeimgs/common/image30.png",
+        "src": "assets/cookbook/recipeimgs/common/image3.png",
         "tier": 1,
         "ingredients": ["Mushroom"],
         "fullness": 240,
@@ -381,7 +381,7 @@ const recipeList = [
         "name": "Cantaloupe Slushie",
         "src": "assets/cookbook/recipeimgs/common/image20.png",
         "tier": 2,
-        "ingredients": ["Ice Cube", "Cantaloupe"],
+        "ingredients": ["Ice Piece", "Cantaloupe"],
         "fullness": 300,
         "effects": {
             "heatResist": 15
@@ -480,7 +480,7 @@ const recipeList = [
         "name": "Cold Lime Broth",
         "src": "assets/cookbook/recipeimgs/common/image29.png",
         "tier": 2,
-        "ingredients": ["Bodhi Fruit", "Ice Cube", "Meat"],
+        "ingredients": ["Bodhi Fruit", "Ice Piece", "Meat"],
         "fullness": 300,
         "effects": {
             "heatResist": 15
@@ -738,7 +738,7 @@ const recipeList = [
         "name": "Watermelon Slushie",
         "src": "assets/cookbook/recipeimgs/common/image49.png",
         "tier": 3,
-        "ingredients": ["Ice Cube", "Watermelon"],
+        "ingredients": ["Ice Piece", "Watermelon"],
         "fullness": 420,
         "effects": {
             "heatResist": 15
@@ -1411,7 +1411,7 @@ const recipeList = [
         "name": "Honeydew Melon Slushie",
         "src": "assets/cookbook/recipeimgs/common/image11.png",
         "tier": 5,
-        "ingredients": ["Ice Cube", "Ice Cube", "Honeydew Melon"],
+        "ingredients": ["Ice Piece", "Ice Piece", "Honeydew Melon"],
         "fullness": 650,
         "effects": {
             "heatResist": 15
@@ -1694,7 +1694,7 @@ const recipeList = [
     },
     {
         "name": "Verdura Rice Soup",
-        "src": "assets/cookbook/recipeimgs/verduraricesoup.png",
+        "src": "assets/cookbook/recipeimgs/common/verduraricesoup.png",
         "tier": 3,
         "ingredients": ["Nine Ear Grain", "Bodhi Fruit", "Ice Piece or Dew"],
         "fullness": 300,
@@ -1703,8 +1703,8 @@ const recipeList = [
         },
     },
     {
-        "name": "Grilled Fish Cube",
-        "src": "assets/cookbook/recipeimgs/grilledfishcube.png",
+        "name": "Grilled Fish Piece",
+        "src": "assets/cookbook/recipeimgs/common/grilledfishPiece.png",
         "tier": 3,
         "ingredients": ["Aspal Grass", "Meat Tier 1", "Fish Tier 2"],
         "fullness": 300,
@@ -1714,7 +1714,7 @@ const recipeList = [
     },
     {
         "name": "Crispy Roasted Core",
-        "src": "assets/cookbook/recipeimgs/crispyroastedcore.png",
+        "src": "assets/cookbook/recipeimgs/common/crispyroastedcore.png",
         "tier": 3,
         "ingredients": ["Tingle Grass Pistil", "Tier 1-3 Fruit", "A Flower"],
         "fullness": 300,
@@ -1724,7 +1724,7 @@ const recipeList = [
     },
     {
         "name": "Seer Fruit Soup",
-        "src": "assets/cookbook/recipeimgs/seerfruitsoup.png",
+        "src": "assets/cookbook/recipeimgs/common/seerfruitsoup.png",
         "tier": 3,
         "ingredients": ["Seer Fruit", "Tier 1-3 Fruit", "Ice Piece or Dew"],
         "fullness": 300,
@@ -1734,7 +1734,7 @@ const recipeList = [
     },
     {
         "name": "Lotus Poached Egg",
-        "src": "assets/cookbook/recipeimgs/lotuspoachedegg.png",
+        "src": "assets/cookbook/recipeimgs/common/lotuspoachedegg.png",
         "tier": 3,
         "ingredients": ["Nine Ear Grain", "Egg White", "Tier 2 Fruit Sauce", "Ice Piece or Dew"],
         "fullness": 420,
@@ -1744,7 +1744,7 @@ const recipeList = [
     },
     {
         "name": "Super Spicy Fish",
-        "src": "assets/cookbook/recipeimgs/superspicyfish.png",
+        "src": "assets/cookbook/recipeimgs/common/superspicyfish.png",
         "tier": 3,
         "ingredients": ["Aspal Grass", "Spicy Pepper or Garlic Sauce", "Fish Tier 3"],
         "fullness": 420,
@@ -1754,7 +1754,7 @@ const recipeList = [
     },
     {
         "name": "Vegetarian Rice",
-        "src": "assets/cookbook/recipeimgs/vegetarianrice.png",
+        "src": "assets/cookbook/recipeimgs/common/vegetarianrice.png",
         "tier": 4,
         "ingredients": ["Vegetables x2 Tier 3", "Coriander or Spicy Powder", "Nine Ear Grain", "Cinnabar Fruit"],
         "fullness": 540,
