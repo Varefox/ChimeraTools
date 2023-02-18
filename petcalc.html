@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="true">
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mingzat">
+    <title>Chimeraland Pet/Attendant EXP Calculator</title>
+    <link rel="stylesheet" type="text/css" href="sharedlib/common.css">
+    <link rel="stylesheet" type="text/css" href="assets/petcalc/petcalc.css">
+
+</head>
+
+<body>
+<div id="navcall"><!-- Nav Content --></div>
+        <h2>Welcome! Please pull out your mount or attendant.</h2>
+    <br>
+    <main>
+        <section id="calculator-container">
+            <div class="main-content userInputForm">
+                <label for="levelGoal">
+                    <span class="question margin-left">What level do you want them to be?</span>
+                    <input class="smaller-font input border-warning box-shadow" id="levelGoal" onchange="limiter(this)"
+                           oninput="calcExp()" onclick="this.select();" type="number" value="21" min="2"
+                           onblur="if(this.value==''){this.value=2;}" required />
+                </label>
+            </div>
+            <div class="main-content userInputForm">
+                <label for="level"><span class="question margin-left">
+                    Their current level?
+                </span>
+                    <input class="smaller-font input border-warning box-shadow" id="level" onchange="limiter(this)"
+                           oninput="calcExp()" onclick="this.select();" type="number" value="1" min="1"
+                           onblur="if(this.value==''){this.value=1;}" required />
+                </label>
+            </div>
+            <div class="main-content userInputForm">
+                <label for="currentExp">
+                    <span class="question margin-left">How much EXP into the level are they? <sub>(not required)</sub></span>
+                    <input class="smaller-font input border-warning box-shadow" id="currentExp" oninput="calcExp()"
+                           onclick="this.select();" type="number" value="0" min="0"
+                           onblur="if(this.value==''){this.value=0;calcExp()}" />
+                </label>
+            </div>
+            <div class="results-text-container">
+                <ul class="results-text">
+                    <li>
+                        <span>
+                            They need <output id="expNeededText">17,065</output> EXP
+                                    </span>
+                    </li>
+                    <li class="pill-text-container" id="purity-result">
+                        <output id="purity-needed" class="pill-text">0</output>
+                        <span class="pill-result" id="purity-result-text">Purity</span>
+                    </li>
+                    <li class="pill-text-container" id="skycharge-result">
+                        <output id="skycharge-needed" class="pill-text">0</output>
+                        <span class="pill-result" id="skycharge-result-text">Skycharge</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="flipscript"><p>Not quite what you're looking for? <span id="flipOnClick" onclick="flip();">Flip the Script!<img class="flipicon" alt="flip icon" src="assets/petcalc/img/repeat-solid.svg" /></span></p></div>
+        </section>
+        <section id="reverse-calculator-container">
+            <div class="main-content userInputForm">
+                <label for="currentPills">
+                    <span class="question margin-left">How many purity pills do you have?</span>
+                    <input class="smaller-font input border-warning box-shadow" id="currentPills" oninput="reverseCalc()"
+                    onclick="this.select();" type="number" value="0" min="0";
+                    onblur="if(this.value===''){this.value=0;reverseCalc()}" />
+                </label>
+            </div>
+            <div class="main-content userInputForm">
+                <label for="reverseLevel">
+                    <span class="question margin-left">Their current level?</span>
+                    <input class="smaller-font input border-warning box-shadow" id="reverseLevel" oninput="reverseCalc();"
+                    onclick="this.select();" type="number" value="1" min="1" max="70";
+                    onblur="if(this.value===''){this.value=0;reverseCalc()}" />
+                </label>
+            </div>
+            <div class="main-content userInputForm">
+                <label for="reverseExp">
+                    <span class="question margin-left">Their current exp? (optional)</span>
+                    <input class="smaller-font input border-warning box-shadow" id="reverseExp" oninput="reverseCalc()"
+                    onclick="this.select();" type="number" value="0" min="0";
+                    onblur="if(this.value===''){this.value=0;reverseCalc()}" />
+                </label>
+            </div>
+            <div class="reverse-results-text-container">
+                <ul class="reverse-results-text">
+                    <li>
+                        <span>
+                            After <output id="current-pills-text">0</output> purity pills, they'll be level <output id="new-level-text"></output>.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+                        <div id="flipbackscript"><p>Want the other calculator back? <span id="flipbackOnClick" onclick="flipback();">Flip the Script Back!<img class="flipicon" alt="flip icon" src="assets/petcalc/img/repeat-solid.svg" /></span></p></div>
+        </section>
+        <section class="notice-container box-shadow">
+            <aside>
+                <ul>
+                    <li>
+                        <span class="bold larger-font color-1">Level 1 to 21:</span><br class="hiddenbr">
+                        <span class="sm-padding-left">1 Skycharge</span>
+                    </li>
+                    <li class="sm-margin-top">
+                        <span class="bold larger-font color-1">To 41:</span><br class="hiddenbr">
+                        <span class="sm-padding-left">6 Purity, 1 Skycharge</span>
+                    </li>
+                    <li class="sm-margin-top">
+                        <span class="bold larger-font color-1">To 61:</span><br class="hiddenbr">
+                        <span class="sm-padding-left">86 Purity, 1 Skycharge</span>
+                    </li>
+                    </li>
+                    <li class="sm-margin-top">
+                        <span class="bold larger-font color-1">To 70:</span><br class="hiddenbr">
+                        <span class="sm-padding-left">979 Purity, 2 Skycharge</span>
+                </ul>
+            </aside>
+        </section>
+
+
+
+        <!-- Crediting players who contributed to data collection -->
+        <details class="info-container width-limit40">
+            <summary>
+                <img src="https://github.com/Varefox/ChimeraTools/blob/Main/assets/petcalc/img/info.png?raw=true" alt="" class="info box-shadow" />
+                <span class="credits"></span>
+            </summary>
+            <hr>
+            <p class="notes">Created by
+                <span class="bold">Fox</span>
+                from
+                <b>301PhoenixBay</b>
+                <br><br>Special thanks for data collection:<br>
+                <b>Micha</b>,
+                <b>Annalae</b>, and
+                <b>Hammerhead</b><br>
+                <br>
+                Levels 66+ are predicted until<br>
+                further data is obtained.<br><br>
+                Feedback, issues, ideas?<br><br>
+                
+                <a href="mailto:varefox@gmail.com" class="email-link">Send an email</a> to varefox@gmail.com<br>
+                <br><span class="donation-text"><a href="https://www.paypal.com/donate/?hosted_button_id=D3Y5QQ2MYW7AA"
+                       class="info-link-button">
+                        <button id="donation" class="btn btn-primary btn-info-link">Support my work?</button>
+                    </a></span>
+                <br>
+            </p>
+        </details>
+    </main>
+    
+    
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="assets/petcalc/calcexp.js"></script>
+<script src="sharedlib/jquery/jquerynav.js"></script>
+</html>
