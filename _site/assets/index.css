@@ -23,7 +23,6 @@
 
 #frontpageimg {
     width: 90vw;
-    height: 58vh;
     margin-left: -2vw;
     z-index: -1;
     position: relative;
@@ -41,15 +40,11 @@
     border: 2px solid tan;
 }
 aside {
-    margin-bottom: -20%;
-    padding: 2px;;
+    padding: 2px;
 }
 
 @media only screen and (max-width: 770px) {   
 aside {
 display: none;
-}
-#frontpageimg {
-    height: fit-content;
 }
 }
