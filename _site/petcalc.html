@@ -16,51 +16,29 @@
 <div id="navcall"><!-- Nav Content --></div>
         <h2>Welcome! Please pull out your mount or attendant.</h2>
     <br>
-<<<<<<< HEAD
-    <main>
-        <section id="calculator-container">
-            <div class="main-content userInputForm">
-                <label for="levelGoal">
-                    <span class="question margin-left">What level do you want them to be?</span>
-                    <input class="smaller-font input border-warning box-shadow" id="levelGoal" onchange="limiter(this)"
-=======
     <main class="content-container border-dark">
         <section class="container text-nowrap" id="calculator-container">
             <div class="main-content userInputForm">
                 <label class="form-label" for="levelGoal">
                     <span class="question margin-left">What level do you want them to be?</span>
                     <input class="smaller-font input border-warning box-shadow form-control" id="levelGoal" onchange="limiter(this)"
->>>>>>> 842d7597974398c2128fa05854caf8a3923e2629
                            oninput="calcExp()" onclick="this.select();" type="number" value="21" min="2"
                            onblur="if(this.value==''){this.value=2;}" required />
                 </label>
             </div>
             <div class="main-content userInputForm">
-<<<<<<< HEAD
-                <label for="level"><span class="question margin-left">
-                    Their current level?
-                </span>
-                    <input class="smaller-font input border-warning box-shadow" id="level" onchange="limiter(this)"
-=======
                 <label class="form-label" for="level"><span class="question margin-left">
                     Their current level?
                 </span>
                     <input class="smaller-font input border-warning box-shadow form-control" id="level" onchange="limiter(this)"
->>>>>>> 842d7597974398c2128fa05854caf8a3923e2629
                            oninput="calcExp()" onclick="this.select();" type="number" value="1" min="1"
                            onblur="if(this.value==''){this.value=1;}" required />
                 </label>
             </div>
             <div class="main-content userInputForm">
-<<<<<<< HEAD
-                <label for="currentExp">
-                    <span class="question margin-left">How much EXP into the level are they? <sub>(not required)</sub></span>
-                    <input class="smaller-font input border-warning box-shadow" id="currentExp" oninput="calcExp()"
-=======
                 <label class="form-label" for="currentExp">
                     <span class="question margin-left">How much EXP into the level are they? <sub>(not required)</sub></span>
                     <input class="smaller-font input border-warning box-shadow form-control" id="currentExp" oninput="calcExp()"
->>>>>>> 842d7597974398c2128fa05854caf8a3923e2629
                            onclick="this.select();" type="number" value="0" min="0"
                            onblur="if(this.value==''){this.value=0;calcExp()}" />
                 </label>
@@ -82,46 +60,6 @@
                     </li>
                 </ul>
             </div>
-<<<<<<< HEAD
-            <div id="flipscript"><p>Not quite what you're looking for? <span id="flipOnClick" onclick="flip();">Flip the Script!<img class="flipicon" alt="flip icon" src="assets/petcalc/img/repeat-solid.svg" /></span></p></div>
-        </section>
-        <section id="reverse-calculator-container">
-            <div class="main-content userInputForm">
-                <label for="currentPills">
-                    <span class="question margin-left">How many purity pills do you have?</span>
-                    <input class="smaller-font input border-warning box-shadow" id="currentPills" oninput="reverseCalc()"
-                    onclick="this.select();" type="number" value="0" min="0";
-                    onblur="if(this.value===''){this.value=0;reverseCalc()}" />
-                </label>
-            </div>
-            <div class="main-content userInputForm">
-                <label for="reverseLevel">
-                    <span class="question margin-left">Their current level?</span>
-                    <input class="smaller-font input border-warning box-shadow" id="reverseLevel" oninput="reverseCalc();"
-                    onclick="this.select();" type="number" value="1" min="1" max="70";
-                    onblur="if(this.value===''){this.value=0;reverseCalc()}" />
-                </label>
-            </div>
-            <div class="main-content userInputForm">
-                <label for="reverseExp">
-                    <span class="question margin-left">Their current exp? (optional)</span>
-                    <input class="smaller-font input border-warning box-shadow" id="reverseExp" oninput="reverseCalc()"
-                    onclick="this.select();" type="number" value="0" min="0";
-                    onblur="if(this.value===''){this.value=0;reverseCalc()}" />
-                </label>
-            </div>
-            <div class="reverse-results-text-container">
-                <ul class="reverse-results-text">
-                    <li>
-                        <span>
-                            After <output id="current-pills-text">0</output> purity pills, they'll be level <output id="new-level-text"></output>.
-                        </span>
-                    </li>
-                </ul>
-            </div>
-                        <div id="flipbackscript"><p>Want the other calculator back? <span id="flipbackOnClick" onclick="flipback();">Flip the Script Back!<img class="flipicon" alt="flip icon" src="assets/petcalc/img/repeat-solid.svg" /></span></p></div>
-=======
->>>>>>> 842d7597974398c2128fa05854caf8a3923e2629
         </section>
         <section class="notice-container box-shadow">
             <aside>
@@ -146,11 +84,6 @@
             </aside>
         </section>
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 842d7597974398c2128fa05854caf8a3923e2629
         <!-- Crediting players who contributed to data collection -->
         <details class="info-container width-limit40">
             <summary>

@@ -113,12 +113,7 @@ input[type=number] {
   font-size: 1.1em;
   text-align: end;
   height: 1.4em;
-<<<<<<< HEAD
-  width: 18%;
-  min-width: 18%;
-=======
   width: 8%;
->>>>>>> 842d7597974398c2128fa05854caf8a3923e2629
 }
 
 .notice-container {
@@ -152,24 +147,6 @@ li {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
-<<<<<<< HEAD
-.flipicon {
-  max-height: 2%;
-  max-width: 2%;
-  filter: brightness(0)invert(1)  ;
-  -webkit-filter: brightness(0)invert(1)  ;
-}
-#flipscript, #flipbackscript {
-margin-left: 4vw;
-}
-#flipOnClick, #flipbackOnClick {
-  text-decoration: underline;
-}
-#reverse-calculator-container {
-display: none;
-}
-=======
->>>>>>> 842d7597974398c2128fa05854caf8a3923e2629
 
 .email-link {
   text-decoration: unset;

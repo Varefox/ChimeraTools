@@ -1,0 +1,39 @@
+.thumbnail > img {
+    width: 310px;
+    min-width: 310px;
+    height: 240px;
+    min-height: 240px;
+    z-index: 1;
+    margin-left: 4vw;
+}
+
+.imagehover:hover {
+    width: 320px;
+    height: 240px;
+    transition: .4s ease;
+    -webkit-transition: .4s ease;
+    -moz-transition: .4s ease;
+    -ms-transition: .4s ease;
+    -o-transition: .4s ease;
+}
+
+.main {
+    margin-left: 3vw;
+}
+.sidenotes {
+    margin-right: 2%;
+    margin-left: 20%;
+    font-size: 0.87em;
+    border: 2px solid tan;
+}
+
+@media only screen and (max-width: 770px) {   
+    .responsive-fix {
+        font-size: 0.6em;
+        position: relative;
+    }
+    .display-topright {
+        position: unset;
+    }
+
+}
