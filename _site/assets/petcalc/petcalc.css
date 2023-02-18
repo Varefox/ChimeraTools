@@ -113,7 +113,8 @@ input[type=number] {
   font-size: 1.1em;
   text-align: end;
   height: 1.4em;
-  width: 8%;
+  width: 18%;
+  min-width: 18%;
 }
 
 .notice-container {
@@ -146,6 +147,21 @@ li {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+}
+.flipicon {
+  max-height: 2%;
+  max-width: 2%;
+  filter: brightness(0)invert(1)  ;
+  -webkit-filter: brightness(0)invert(1)  ;
+}
+#flipscript, #flipbackscript {
+margin-left: 4vw;
+}
+#flipOnClick, #flipbackOnClick {
+  text-decoration: underline;
+}
+#reverse-calculator-container {
+display: none;
 }
 
 .email-link {
