@@ -11,20 +11,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mingzat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/ChimeraTools/sharedlib/common.css" />
-    <link rel="stylesheet" href="/ChimeraTools/guides/assets/newplayerguide.css" />
+    <link rel="stylesheet" href="/ChimeraTools/styles/common.css" />
+    <link rel="stylesheet" href="/ChimeraTools/guides/styles/newplayerguide.css" />
 </head>
 
 <div id="navcall"></div>
+
 <body>
     <main>
-        <section class="">
+        <section>
             <div class="container">
                 <h1 class="text-teal">
-                    The Long Road
+                    The Long Road to 50k
                 </h1>
                 <span>This guide aims to help those still getting to end game and addresses some of the more common
-                    questions I see on a daily basis. </span>
+                    questions I see on a daily basis. </span><br><br>
+                    <details class="index" value="Index">
+                        <summary>Index</summary>
+                    </details>
+                    <br><br>
                 <div class="beginning">
                     <h2><b>First steps.. Creating your Character.</b></h2>
                     <ul>
@@ -50,50 +55,60 @@
                 <h2>User Interface</h2>
             </div>
             <div>
-            <div class="imgholder quarter"><img src="/ChimeraTools/guides/assets/ui.jpg" alt="user interface" id="ui-img"/></div>
-                    <div class="content"><p>Your hit points are represented by orange bar on the right of the screenshot.</p>
-                <p>Your pet and attendant's hit points are directly below with the pet being on the left.</p>
-                <p>A numerical value for your hit points can be seen in the Character menu.</p>
+                <div class="container-content">
+                    <div class="imgholder"><img src="/ChimeraTools/guides/images/ui.jpg" alt="user interface"
+                             id="ui-img" /></div>
+                    <div class="content">
+                        <p>Your hit points are represented by orange bar on the right of the screenshot.</p>
+                        <p>Your pet and attendant's hit points are directly below with the pet being on the left.</p>
+                        <p>A numerical value for your hit points can be seen in the Character menu.</p>
 
-                <p>The menu on the left is your quick consumables for yourself and your companions.
-                <p>The mount/attendant's tab can be configured to auto use a pet potion when
-                    pet reaches the specified HP percentage.  They will always use the least effective potion available first.</p>
-            </div>
-            </div>
+                        <p>The menu on the left is your quick consumables for yourself and your companions.
+                        <p>The mount/attendant's tab can be configured to auto use a pet potion when
+                            pet reaches the specified HP percentage. They will always use the least effective potion
+                            available first.</p>
+                    </div>
+                </div>
         </section>
 
         <section class="container" id="tutorial">
             <div class="section-heading">
                 <h2>Picking a Faction</h2>
             </div>
-            <div class="content">
-                <p>ChimeraLand is divided into three major continents and two high-level unfactioned continents:</p>
-                <div class="imgholder half"><img src="/ChimeraTools/guides/assets/factions.png" alt="map image" id="map-img" /></div>
-                <ul class="quarter">
-                    <li>Westmount - Bearie</li>
-                    <li>Southmount - Nine Li</li>
-                    <li>Eastmount - Fiery Hills</li>
-                </ul>
-                
-                <ul class="quarter">
-                    <li>Centralmount - A large PVP zone in the center with themed biomes, and Honor Beasts</li>
-                    <li>Northmount - The newest addition to the map, with sacred tree trials and very strong enemies.
-                    </li>
-                </ul>
-            </div>
-            <div class="content">
-                <p>Central and North are open to anybody wishing to build there, though the areas aren't meant for
-                    players before level 50.
-                    Any differences between the continents are minor and shouldn't affect your experience.</p>
-                <p>You are able to change factions at the cost of 500 Sage. (Location needed)</p>
-            </div>
-            <div class="content">
-                <h3>The in-game tutorials are absolutely necessary to understand some of this games' in depth mechanics
-                    and procedures.</h3>
-                <b>If you choose to ignore these tutorials</b> you will have a tough time with this game. If something
-                doesn't make sense to you, then ask for help.
-                Asking endless questions because you chose to skip the tutorial will just annoy people.
-                </h3>
+            <div class="container-content">
+                <div class="content">
+                    <p>ChimeraLand is divided into three major continents and two high-level unfactioned continents:</p>
+                    <div class="imgholder half"><img src="/ChimeraTools/guides/images/factions.png" alt="map image"
+                             id="map-img" /></div>
+                    <ul class="quarter">
+                        <li>Westmount - Bearie</li>
+                        <li>Southmount - Nine Li</li>
+                        <li>Eastmount - Fiery Hills</li>
+                    </ul>
+
+                    <ul class="quarter">
+                        <li>Centralmount - A large PVP zone in the center with themed biomes, and Honor Beasts</li>
+                        <li>Northmount - The newest addition to the map, with sacred tree trials and very strong
+                            enemies.
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <p>Central and North are open to anybody wishing to build there, though the areas aren't meant for
+                        players before level 50.
+                        Any differences between the continents are minor and shouldn't affect your experience.</p>
+                    <p>You are able to change factions at the cost of 500 Sage. (Location needed)</p>
+                </div>
+                <div class="content">
+                    <h3>The in-game tutorials are absolutely necessary to understand some of this games' in depth
+                        mechanics
+                        and procedures.</h3>
+                    <b>If you choose to ignore these tutorials</b> you will have a tough time with this game. If
+                    something
+                    doesn't make sense to you, then ask for help.
+                    Asking endless questions because you chose to skip the tutorial will just annoy people.
+                    </h3>
+                </div>
             </div>
         </section>
         <section class="twothird container" id="whattodo">
@@ -122,14 +137,14 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="sharedlib/jquery/jquerynav.js"></script>
+<script src="scripts/nav/jquerynav.js"></script>
 
 <script>
-    Array.prototype.forEach.call(document.querySelector("img"), function (elem) {
-            elem.addEventListener("click", function () {
-                elem.classList.toggle("enlarged");
-            });
+    Array.prototype.forEach.call(document.getElementsByTagName("img"), function (elem) {
+        elem.addEventListener("click", function () {
+            elem.classList.toggle("enlarged");
         });
+    });
 </script>
 
 </html>

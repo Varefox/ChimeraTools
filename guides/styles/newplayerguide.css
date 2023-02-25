@@ -1,0 +1,35 @@
+#ui-img {
+max-width: 100%;
+height: auto;
+}
+
+#map-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
+    display: inline-block;
+max-width: 70%;
+}
+
+.enlarged {
+position: absolute;
+top: 50%;
+bottom: 50%;
+width: 60vw;
+height: auto;
+}
+
+.imgholder {
+    margin-right: 15px;
+}
+
+.container-content {
+    display: flex;
+}
+
+img {
+    z-index: 1;
+    box-shadow: 2px 2px 10px black, -2px -2px 10px black;
+}

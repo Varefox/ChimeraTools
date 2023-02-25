@@ -10,17 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mingzat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="sharedlib/common.css" />
-    <link rel="stylesheet" href="assets/index.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/index.css" />
 </head>
 <div id="navcall"><!-- Nav Content --></div>
 <body>
     <main class="main">
-        <div><img src="assets/frontpageimg.png" alt="frontpageimg" class="display bs" id="frontpageimg"></div>
+        <div><img src="images/frontpageimg.png" alt="frontpageimg" class="display bs" id="frontpageimg"></div>
     </div>
-    <div class="row padding-64 halfwide position-relative margin-left">
-        <article class="position-relative">
-            <h3 class="text-blue-grey">Resources, guides, tools, whathaveya for ChimeraLand
+    <div class="row padding-64 half position-relative margin-left">
+        <article>
+            <h3 class="text-blue-grey">Tools & Guides for Chimeraland
             </h3>
             <p>It's coming along! All pages are incomplete except the pet exp calculator. But it's all getting there
                 slowly.
@@ -31,65 +31,52 @@
             </p>
         </article>
     </div>
-    <div class="display-rightbottom halfwide">
-        <aside class="sidenotes"><b>Fox</b> is a self-taught web developer and this is the first sizeable project. Criticism, complaints, feedback, questions, thoughts, or
-            comments, corrections, collaboration request, contribution, and what I need the most, job offers?
-            <br>Contact <b>Fox</b> at <b>varefox@gmail.com</b> or on Discord as
+    <div class="position-relative third row">
+        <aside class="sidenotes"><b>Fox</b> is a self-taught web developer and this is the first sizeable project. Something to tell me?<br>
+            <br>Contact <b>Fox</b> at <b><a href="mailto:varefox@gmail.com">varefox@gmail.com</a></b> or on Discord as
             Fox-- #2568, or in game.<br>
             <br>
-            If you're interested in my work for your website or company, please contact me! I would be so grateful for
-            the opportunity!<br>
+            For work prepositions, <a href="mailto:taigenjgraham@gmail.com">contact me!</a><br><br>
             If you just feel like being generous, you can <a
                href="https://www.paypal.com/donate/?hosted_button_id=D3Y5QQ2MYW7AA">support my work here.</a><br>
             Thank you!
         </aside>
+        <h1 class="quarter my-5 row">Tools</h1>
     </div>
-    <div id="pages-wrapper" class="row padding-16">
-        <main class="links-wrapper border">
-            <div class="thumbnail half row">
-                <img alt="pet calculator thumbnail" src="assets/petCalcThumb.png"
+    <div id="pages-wrapper">
+        <main id="link-wrapper">
+            <div class="thumbnail half">
+                <img alt="pet calculator thumbnail" src="images/petcalc/petCalcThumb.png"
                      class="imagehover">
             </div>
             <article class="position-relative">
-                <h1 class="text-teal"><a href="/ChimeraTools/petcalc.html"
-                       class="hover-text-light-blue">Pet/Attendant EXP Calculator</a></h1>
-                <p>Never waste an EXP pill by knowing the exact amount of EXP <br>is needed for your mounts/attendants
+                <h2 class="text-teal"><a href="/ChimeraTools/petcalc.html"
+                       class="hover-text-light-blue">Pet/Attendant EXP Calculator</a></h2>
+                <p>Get the most out of your purity pills. This tool will tell you the exact amount of EXP needed for your mounts/attendants to get them to the desired level.<br>
+                    <br>
+                    Recent update: It now tells you what level your pet will be if you give it X amount of pills.
                 </p>
             </article>
-            <div class="container border half position-relative right-align">
-                <div class="row">
-                    <div class="quarter">
-                        <h1 class="text-teal">Cookbook (canceled)</h1>
-                        <p>This was going to be an interactive cookbook app that displayed recipes in a paginated grid,
-                            allowing you<br>
-                            to build an ingredient list depending on which/how many recipes you wanted to craft!<br>
-                            I have accepted that it is outside my patience level at the moment and will return to it
-                            eventually.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container border">
+            <div class="container"><br><br>
                 <div class="row quarter border">
-                    <h1 class="text-teal">Crafter's Daybook (coming soon)</h1>
-                    <p>Much like the recipe planner, the Crafter's Daybook will provide every crafting recipe.
-                        It will also include a list of materials to farm and eventually methods of obtaining each item.
+                    <h2 class="text-teal">Artisan's Daybook (coming soon)</h2>
+                    <p>The Artisan's Daybook aims to provide every crafting recipe available in the game.
+                        It will also include a list of materials to farm as per your selection and ultimately, methods of obtaining each item.
                     </p>
                 </div>
-            </div>
-            <div class="container border half position-relative right-align">
-                <div class="row">
-                    <div class="display right row">
-                        <h1 class="text-teal">Equipment BP Calculator (coming soon)</h1>
+                <div class="container quarter border position-relative right-align">
+                    <div class="row">
+                        <h2 class="text-teal">Equipment BP Calculator (coming soon)</h2>
                         <p>This tool provides calculations for all of the attributes that are available on gear.<br>
                             Perfect if you're looking to min-max your BP rating, or just see what's out there..</p>
-                    </div>
-                </div>
+                        </div>
+                        </div>
             </div>
         </main>
 
         <section id="future-content" class="row padding-64">
             <div class="future-content-wrapper">
-                <div class="container border halfwide"><span>Possibly will include:</span></div>
+                <div class="container border"><span>Possibly will include:</span></div>
                 <div class="candidate"><b>Player Community Center</b> - To make your voice be heard throughout the land</div>
                 <b></b>
                 <div class="candidate"><b>Player Trading Center</b></div> - An informal auction house of sorts where
@@ -99,6 +86,6 @@
     </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="sharedlib/jquery/jquerynav.js"></script>
+<script src="scripts/nav/jquerynav.js"></script>
 
 </html>
