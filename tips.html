@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <base href="/ChimeraTools/">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Game: Chimeraland, Tools & Resources for Quality of Life">
+    <title>ChimeraTools - Tips for Tricks</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mingzat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ChimeraTools/styles/common.css" />
+    <link rel="stylesheet" href="/ChimeraTools/styles/tips.css" />
+</head>
+
+<div id="navcall"></div>
+
+<body>
+        <section id="topbar">
+                <h2>Tips and Tricks Info</h2>
+            <div class="contribution">
+                <p>Any tip submissions can be sent to: &nbsp;
+                    <a href="mailto:varefox@gmail.com">varefox@gmail.com</a><br>
+                Include your in-game name in the email or your tip will be credited as <i>[Anonymous]</i><br>
+                Uncredited tips were of my own discovery, otherwise all submissions are credited to the best of my knowledge.
+                </>
+            </div>
+        </section>
+
+    <section class="tipscontainer">
+        <h2 id="tipsheading">
+            General Tips
+        </h2>
+        <aside onclick="expandAll()" id="expand"></i>  Expand All</aside>
+        <details class="tip">
+            <summary>
+                Easy Raptor Stone Egg Collection
+            </summary>
+            <p>Place a column with a single laminate floor piece on top of it. Stand in the center of it
+                when using your Raptor Stones.
+                <br>
+                The harriers will not be able to move, and the eggs will all stack in the center making
+                collection simple.
+            </p>
+        </details>
+        <br>
+        <details class="tip">
+            <summary>Instant Surface from any Depth</summary>
+            <p>If you're below the water's surface getting back up to the top is as easy at summoning a bone ski
+                from the ride menu.</p>
+            <br>
+            <p>Interacting with it will instantly propel you to the top of the water.</p>
+        </details>
+        <br>
+        <details class="tip">
+            <summary>Utilizing the Fuse Menu</summary>
+            <p>This isn't exactly a cool new trick, but it's something I witness many people not utilizing.</p>
+            <p>This is the fuse menu. No doubt you'd used it before. But did you know it easily gathers all your
+                like items</p>
+            <img src="/ChimeraTools/images/fusebutton.png" alt="fuse button" /> <img
+                 src="/ChimeraTools/images/fusemenu.png" alt="fuse menu" />
+            <p>Your fuse menu can be utilized in your home location to stack all of your pet/attendant skill items,
+                and your sigils.</p>
+            <p>This eliminates jumping from storage to storage trying to keep track of your own inventory.</p>
+            <p>Recommend accessing this menu through a sigil. One too many times have I granted my pet a skill
+                because I was trying to fuse it.</p>
+            <p>Once you reach this menu, select the left side item and browse the list. Typically, anything that has
+                3 or more can be fused. </p>
+        </details>
+<br>
+        <details class="tip">
+        <summary>Easily Identify Plot Levels at Base</summary>
+        <p>By using the Renovate feature in Build Mode, you can color your farming plots. Use this to easily distinguish different levels of plots.</p>
+        </details>
+        <br>
+
+
+    </section>
+            <hr>
+            <div id="footeronpage">Portions of the content provided here, including trademarks and copyrights and any other
+                intellectual
+                property rights,
+                are owned or held by Proxima Beta Pte. Limited or its licensor(s) (“PBP”) and all rights in and to the same are
+                reserved
+                by PBP. This content is not official PBP content and is not endorsed or approved by PBP.</div>
+</body>
+<script>
+    Array.prototype.forEach.call(document.getElementsByTagName("img"), function (elem) {
+        elem.addEventListener("click", function () {
+            elem.classList.toggle("enlarged");
+        });
+    });
+
+    const expandAll = () => {
+            document.body.querySelectorAll('details').forEach((e) => {
+                (e.hasAttribute('open') && (e.classList.contains('first') === false)) ? e.removeAttribute('open') : e.setAttribute('open', true);
+            })};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="scripts/nav/jquerynav.js"></script>
+
+</html>

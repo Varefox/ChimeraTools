@@ -1,0 +1,8 @@
+.image {
+max-width: 500px;
+box-shadow: 4px 4px 4px black, -4px -4px 10px black;
+}
+
+h1, h2, h3, p,span {
+    text-shadow: 4px 2px 4px rgb(182, 177, 142);
+}

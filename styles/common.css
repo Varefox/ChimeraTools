@@ -123,7 +123,7 @@ select,
 textarea,
 optgroup {
     font: inherit;
-    margin: 0
+    /* margin: 0; */
 }
 
 optgroup {
@@ -144,7 +144,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-    -webkit-appearance: button
+    /* -webkit-appearance: button; */
 }
 
 button::-moz-focus-inner,
@@ -411,15 +411,6 @@ a {
     padding: 8px 16px
 }
 
-.main,
-#main {
-    transition: margin-left .4s;
-    -webkit-transition: margin-left .4s;
-    -moz-transition: margin-left .4s;
-    -ms-transition: margin-left .4s;
-    -o-transition: margin-left .4s;
-}
-
 .block {
     display: block;
     width: 100%
@@ -502,7 +493,7 @@ a {
 }
 
 .top {
-    top: 0
+    top: 0;
 }
 
 .bottom {
@@ -2393,4 +2384,21 @@ a {
 .card-body {
     flex: 1 1 auto;
     padding: 1rem 1rem
+}
+
+#footeronpage,  #footer {
+width: 100%;
+clear: both;
+font-size: 7px;
+text-align: center;
+margin: 3px;
+}
+
+@media print {
+    #footeronpage {
+display: hide;
+    }
+}
+hr {
+    border-top: 2px solid rgb(154, 179, 199);
 }

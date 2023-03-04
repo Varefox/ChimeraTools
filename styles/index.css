@@ -39,10 +39,16 @@
     border: 2px solid tan;
 }
 
-@media only screen and (max-width: 1000px) {   
 article {
-float: right;
-width: 100%;
+    margin-left: 15px;
+}
+article::first-line {
+text-indent: 4vw;
 }
 
+.separator {
+    position: absolute;
+    background-position-y: 0;
+    min-width: 110vw;
+    background-color: rgba(191, 247, 191, 0.224);
 }

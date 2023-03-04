@@ -6,6 +6,7 @@ height: auto;
 #map-img {
     max-width: 100%;
     height: auto;
+    min-width:650px;
 }
 
 .content {
@@ -13,10 +14,10 @@ height: auto;
 max-width: 70%;
 }
 
+display: flex;
+display: flex;
 .enlarged {
 position: absolute;
-top: 50%;
-bottom: 50%;
 width: 60vw;
 height: auto;
 }
