@@ -6,3 +6,5 @@ _site/
 .jekyll-cache
 cookbook/
 unused/
+template*
+.template*

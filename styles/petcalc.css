@@ -13,7 +13,7 @@ body {
   background-size: 45vw;
   font-size: 1.05em;
   color: #F3F7F0;
-  padding-bottom: 90px;
+  line-height: 1;
   max-height: auto;
   overflow: hidden;
 }
@@ -133,11 +133,9 @@ input[type=number] {
 li {
   list-style-type: none;
 }
-
 .info {
   border: 2px solid rgba(0, 0, 0, 0.397);
   background-color: rgb(255, 255, 255, .8);
-  border-radius: 20px;
   max-height: 34px;
   max-width: 34px;
   cursor: pointer;
@@ -148,12 +146,13 @@ li {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+  border-radius: 20px;
 }
 .flipicon {
   max-height: 2%;
   max-width: 2%;
-  filter: brightness(0)invert(1)  ;
   -webkit-filter: brightness(0)invert(1)  ;
+  filter: brightness(0)invert(1)  ;
 }
 #flipscript, #flipbackscript {
 margin-left: 4vw;

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="HandheldFriendly" content="true">
+
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
     <link rel="preconnect" href="https://fonts.gstatic.com/" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mingzat">
     <title>Chimeraland Pet/Attendant EXP Calculator</title>
@@ -13,8 +14,8 @@
 </head>
 
 <body>
-<div id="navcall"><!-- Nav Content --></div>
-        <h2>Welcome! Please pull out your mount or attendant.</h2>
+    <div id="navcall"><!-- Nav Content --></div>
+    <h2>Ready to level up your mount or attendant?</h2>
     <br>
     <main>
         <section id="calculator-container">
@@ -28,8 +29,8 @@
             </div>
             <div class="main-content userInputForm">
                 <label for="level"><span class="question margin-left">
-                    Their current level?
-                </span>
+                        Their current level?
+                    </span>
                     <input class="smaller-font input border-warning box-shadow" id="level" onchange="limiter(this)"
                            oninput="calcExp()" onclick="this.select();" type="number" value="1" min="1"
                            onblur="if(this.value==''){this.value=1;}" required />
@@ -37,7 +38,8 @@
             </div>
             <div class="main-content userInputForm">
                 <label for="currentExp">
-                    <span class="question margin-left">How much EXP into the level are they? <sub>(not required)</sub></span>
+                    <span class="question margin-left">How much EXP into the level are they? <sub>(not
+                            required)</sub></span>
                     <input class="smaller-font input border-warning box-shadow" id="currentExp" oninput="calcExp()"
                            onclick="this.select();" type="number" value="0" min="0"
                            onblur="if(this.value==''){this.value=0;calcExp()}" />
@@ -48,7 +50,7 @@
                     <li>
                         <span>
                             They need <output id="expNeededText">17,065</output> EXP
-                                    </span>
+                        </span>
                     </li>
                     <li class="pill-text-container" id="purity-result">
                         <output id="purity-needed" class="pill-text">0</output>
@@ -60,43 +62,52 @@
                     </li>
                 </ul>
             </div>
-            <div id="flipscript"><p>Not quite what you're looking for? <span id="flipOnClick" onclick="flip();">Flip the Script!<img class="flipicon" alt="flip icon" src="images/petcalc/repeat-solid.svg" /></span></p></div>
+            <div id="flipscript">
+                <p>Not quite what you're looking for? <span id="flipOnClick" onclick="flip();">Flip the Script!<img
+                             class="flipicon" alt="flip icon" src="images/petcalc/repeat-solid.svg" /></span></p>
+            </div>
         </section>
         <section id="reverse-calculator-container">
             <div class="main-content userInputForm">
                 <label for="currentPills">
                     <span class="question margin-left">How many purity pills do you have?</span>
-                    <input class="smaller-font input border-warning box-shadow" id="currentPills" oninput="reverseCalc()"
-                    onclick="this.select();" type="number" value="0" min="0";
-                    onblur="if(this.value===''){this.value=0;reverseCalc()}" />
+                    <input class="smaller-font input border-warning box-shadow" id="currentPills"
+                           oninput="reverseCalc()"
+                           onclick="this.select();" type="number" value="0" min="0" ;
+                           onblur="if(this.value===''){this.value=0;reverseCalc()}" />
                 </label>
             </div>
             <div class="main-content userInputForm">
                 <label for="reverseLevel">
                     <span class="question margin-left">Their current level?</span>
-                    <input class="smaller-font input border-warning box-shadow" id="reverseLevel" oninput="reverseCalc();"
-                    onclick="this.select();" type="number" value="1" min="1" max="70";
-                    onblur="if(this.value===''){this.value=0;reverseCalc()}" />
+                    <input class="smaller-font input border-warning box-shadow" id="reverseLevel"
+                           oninput="reverseCalc();"
+                           onclick="this.select();" type="number" value="1" min="1" max="70" ;
+                           onblur="if(this.value===''){this.value=0;reverseCalc()}" />
                 </label>
             </div>
             <div class="main-content userInputForm">
                 <label for="reverseExp">
                     <span class="question margin-left">Their current exp? (optional)</span>
                     <input class="smaller-font input border-warning box-shadow" id="reverseExp" oninput="reverseCalc()"
-                    onclick="this.select();" type="number" value="0" min="0";
-                    onblur="if(this.value===''){this.value=0;reverseCalc()}" />
+                           onclick="this.select();" type="number" value="0" min="0" ;
+                           onblur="if(this.value===''){this.value=0;reverseCalc()}" />
                 </label>
             </div>
             <div class="reverse-results-text-container">
                 <ul class="reverse-results-text">
                     <li>
                         <span>
-                            After <output id="current-pills-text">0</output> purity pills, they'll be level <output id="new-level-text">1</output>.
+                            After <output id="current-pills-text">0</output> purity pills, they'll be level <output
+                                    id="new-level-text">1</output>.
                         </span>
                     </li>
                 </ul>
             </div>
-                        <div id="flipbackscript"><p>Want the other calculator back? <span id="flipbackOnClick" onclick="flipback();">Flip the Script Back!<img class="flipicon" alt="flip icon" src="images/petcalc/repeat-solid.svg" /></span></p></div>
+            <div id="flipbackscript">
+                <p>Want the other calculator back? <span id="flipbackOnClick" onclick="flipback();">Flip the Script
+                        Back!<img class="flipicon" alt="flip icon" src="images/petcalc/repeat-solid.svg" /></span></p>
+            </div>
         </section>
         <section class="notice-container box-shadow">
             <aside>
@@ -124,7 +135,8 @@
         <!-- Crediting players who contributed to data collection -->
         <details class="info-container width-limit40">
             <summary>
-                <img src="https://github.com/Varefox/ChimeraTools/blob/Main/images/petcalc/info.png?raw=true" alt="" class="info box-shadow" />
+                <img src="https://github.com/Varefox/ChimeraTools/blob/Main/images/petcalc/info.png?raw=true" alt=""
+                     class="info box-shadow" />
                 <span class="credits"></span>
             </summary>
             <hr>
@@ -140,7 +152,7 @@
                 Levels 66+ are predicted until<br>
                 further data is obtained.<br><br>
                 Feedback, issues, ideas?<br><br>
-                
+
                 <a href="mailto:varefox@gmail.com" class="email-link">Send an email</a> to varefox@gmail.com<br>
                 <br><span class="donation-text"><a href="https://www.paypal.com/donate/?hosted_button_id=D3Y5QQ2MYW7AA"
                        class="info-link-button">
@@ -150,11 +162,16 @@
             </p>
         </details>
     </main>
-    <div id="footeronpage" style="font-size: 9px; @media print{display: hide};">Portions of the content provided here, including trademarks and copyrights and any other intellectual property rights, are owned or held by Proxima Beta Pte. Limited or its licensor(s) (“PBP”) and all rights in and to the same are reserved by PBP. This content is not official PBP content and is not endorsed or approved by PBP.</div><hr>
-    
+    <div id="footeronpage" style="font-size: 9px; @media print{display: hide};">Portions of the content provided here,
+        including trademarks and copyrights and any other intellectual property rights, are owned or held by Proxima
+        Beta Pte. Limited or its licensor(s) (“PBP”) and all rights in and to the same are reserved by PBP. This content
+        is not official PBP content and is not endorsed or approved by PBP.</div>
+    <hr>
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <script src="scripts/calcexp.js"></script>
 <script src="scripts/nav/jquerynav.js"></script>
+
 </html>
