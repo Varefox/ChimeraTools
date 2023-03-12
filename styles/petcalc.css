@@ -200,8 +200,9 @@ details[open] {
   }
   .title {
 max-width: 95%;
-min-width: fit-content;
+min-width: 80px;
 margin-left: -20px;
+padding-top: 40%;
 }
 
 
@@ -211,7 +212,6 @@ margin-left: -20px;
   
   .notice-container {
     max-width: 30vw;
-    min-width: fit-content;
   }
   .larger-font {
     font-size: 1em;
