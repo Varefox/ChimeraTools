@@ -24,6 +24,20 @@ body {
   overflow: hidden;
 }
 
+#disclaimer {
+  text-align: center;
+}
+
+
+#disclaimer p {
+  color: rgb(106, 105, 105);
+  font-family: 'Helvetica';
+  text-shadow: none;
+  font-size: 7px;
+  font-weight: 100;
+  margin-left: 40px;
+}
+
 .question {
   position: relative;
   margin-right: 50vw;

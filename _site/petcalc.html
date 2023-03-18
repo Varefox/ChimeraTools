@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mingzat">
     <title>Chimeraland Pet/Attendant EXP Calculator</title>
-    <link rel="stylesheet" type="text/css" href="styles/common.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles/common.css"> -->
     <link rel="stylesheet" type="text/css" href="styles/petcalc.css">
 
 </head>
@@ -80,7 +80,7 @@
                     <div class="question"><span>Their current level?</span></div>
                     <input class="smaller-font input border-warning box-shadow" id="reverseLevel"
                            oninput="reverseCalc();"
-                           onclick="this.select();" type="number" value="4" min="1" max="70" ;
+                           onclick="this.select();" type="number" value="4" min="1" onchange="limiter(this)"
                            onblur="if(this.value===''){this.value=0;reverseCalc()}" />
                 </label>
             </div>
@@ -97,7 +97,7 @@
                     <li>
                         <div class="question"><span>
                             After <output id="current-pills-text">0</output> purity pills, they'll be level <output
-                                    id="new-level-text">4</output> and have <output id="exp-into-level">0</output> / 
+                                    id="new-level-text">4</output> 
                         </span></div>
                     </li>
                 </ul>
@@ -126,6 +126,10 @@
                         <span class="bold larger-font color-1">To 70:</span><br class="hiddenbr">
                         <span class="sm-padding-left">979 Purity, 2 Skycharge</span>
                     </li>
+                    <li class="sm-margin-top">
+                        <span class="bold larger-font color-1">To 75:</span><br class="hiddenbr">
+                        <span class="sm-padding-left">2136 Purity, 1 Skycharge</span>
+                    </li>
                 </ul>
             </aside>
         </section>
@@ -144,13 +148,9 @@
                 <b>301PhoenixBay</b>
                 <br><br>Special thanks for data collection:<br>
                 <b>Micha</b>,
-                <b>Annalae</b>, and
-                <b>Hammerhead</b><br>
-                <br>
-                Levels 66+ are predicted until<br>
-                further data is obtained.<br><br>
-                Feedback, issues, ideas?<br><br>
-
+                <b>Annalae</b>,
+                <b>Hammerhead</b>,
+                and <b>Kamaitachi</b><br>
                 <a href="mailto:varefox@gmail.com" class="email-link">Send an email</a> to varefox@gmail.com<br>
                 <br><span class="donation-text"><a href="https://www.paypal.com/donate/?hosted_button_id=D3Y5QQ2MYW7AA"
                        class="info-link-button">
@@ -160,7 +160,7 @@
             </p>
         </details>
     </main>
-    <div id="disclosure"><p>Portions of the content provided here,
+    <div id="disclaimer"><p>Portions of the content provided here,
         including trademarks and copyrights and any other intellectual property rights, are owned or held by Proxima
         Beta Pte. Limited or its licensor(s) (“PBP”) and all rights in and to the same are reserved by PBP. This content
         is not official PBP content and is not endorsed or approved by PBP.</p></div>
