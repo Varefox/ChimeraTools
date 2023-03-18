@@ -1,6 +1,12 @@
+html * {
+  text-shadow: unset;
+}
+
 html {
   overflow-y: scroll;
   background: repeating-linear-gradient(7deg, #000010, #212c26, #000010);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -18,6 +24,12 @@ body {
   overflow: hidden;
 }
 
+.question {
+  position: relative;
+  margin-right: 50vw;
+  text-align: left;
+}
+
 .color-1 {
   color: #EEB34B;
 }
@@ -26,9 +38,7 @@ body {
   font-weight: bold;
 }
 
-.center {
-  text-align: center;
-}
+
 
 .sm-margin-top {
   margin-top: 2vh;
@@ -71,9 +81,9 @@ img {
 }
 
 .results-text-container {
-background:rgba(0, 0, 0, 0.06);
-max-width: 40vw;
-font-size: 1.1em;
+  background: rgba(0, 0, 0, 0.06);
+  max-width: 40vw;
+  font-size: 1.1em;
 }
 
 details {
@@ -133,6 +143,11 @@ input[type=number] {
 li {
   list-style-type: none;
 }
+
+h2 {
+  text-align: left;
+}
+
 .info {
   border: 2px solid rgba(0, 0, 0, 0.397);
   background-color: rgb(255, 255, 255, .8);
@@ -148,25 +163,31 @@ li {
   -o-border-radius: 20px;
   border-radius: 20px;
 }
+
 .flipicon {
   max-height: 2%;
   max-width: 2%;
-  -webkit-filter: brightness(0)invert(1)  ;
-  filter: brightness(0)invert(1)  ;
+  -webkit-filter: brightness(0)invert(1);
+  filter: brightness(0)invert(1);
 }
-#flipscript, #flipbackscript {
-margin-left: 4vw;
+
+#flipscript,
+#flipbackscript {
+  margin-left: 4vw;
 }
-#flipOnClick, #flipbackOnClick {
+
+#flipOnClick,
+#flipbackOnClick {
   text-decoration: underline;
 }
+
 #reverse-calculator-container {
-display: none;
+  display: none;
 }
 
 .email-link {
   text-decoration: unset;
-  color:rgba(240, 240, 36, 0.845)
+  color: rgba(240, 240, 36, 0.845)
 }
 
 details[open] {
@@ -189,34 +210,42 @@ details[open] {
 .hiddenbr {
   display: none;
 }
+
 .hover-link:hover {
-  background-color:rgba(92, 220, 224, 0.987);
+  background-color: rgba(92, 220, 224, 0.987);
 }
 
 @media only screen and (max-width: 750px) {
   body {
     font-size: 0.8em;
-    
+
   }
+
   .title {
-max-width: 95%;
-min-width: 80px;
-margin-left: -20px;
-padding-top: 40%;
-}
+    max-width: 95%;
+    min-width: 80px;
+    margin-left: -20px;
+    padding-top: 40%;
+  }
 
 
-.hiddenbr {
+  .hiddenbr {
     display: initial;
   }
-  
+
   .notice-container {
     max-width: 30vw;
   }
+
   .larger-font {
     font-size: 1em;
   }
+
   .smaller-font {
+    font-size: 0.8em;
+  }
+
+  h2 {
     font-size: 0.8em;
   }
 }
@@ -231,10 +260,13 @@ padding-top: 40%;
 .directionswrapper {
   font-size: 1.4em;
 }
+
 h2 {
   color: white;
   margin-left: 160px;
+  font-size: 0.8em;
 }
+
 p {
   color: white;
 }

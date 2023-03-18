@@ -1,45 +1,55 @@
 <style>
 .navbar {
+    z-index: 20;
     overflow: hidden;
-    background-color: #333;
-    color: white;    
+    background-color: #1b1919;
+    color: rgba(248, 241, 175, 0.796);    
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-}
+    justify-content: space-between;
+    border-bottom: 7px solid rgba(168, 248, 144);
+    }
+
+
+
 .navbar, .nav *{
-text-shadow: -4px -3px 7px #ffffff, 3px 3px 10px #bb6262, 2px -4px 10px #fff;
+text-shadow: none;
+font-weight: 550;
+font-size: 1.1em
 }
 .nav {
     overflow: hidden;
-    flex-basis: content;
 }
 
 .nav .navbtn, .navbar a, button {
     font-size: 1em;
     max-height: 3vh;
     width: fit-content;
+    max-width: max-content;
     border: none;
     outline: none;
     color: white;
     margin: 2vh 2vw;
     background-color: inherit;
     font-family: inherit;
+    text-decoration: none;
 }
 
 
 .navbar a:hover,
 .nav:hover .navbtn {
-    background-color: rgb(19, 90, 123);
+    color: rgba(168, 248, 144, 0.744);
 }
-
 .subNav {
     display: none;
+    margin: -4px;
     position: absolute;
     left: 0;
-    background-color: rgb(2, 34, 37);
-    width: 100%;
+    background-color: #292828;
+    width: 100vw;
     z-index: 1;
+    border: 5px solid rgb(149, 248, 107);
 }
 
 .subNav a {
@@ -49,8 +59,10 @@ text-shadow: -4px -3px 7px #ffffff, 3px 3px 10px #bb6262, 2px -4px 10px #fff;
 }
 
 .subNav a:hover {
-    background-color: #eee;
+    text-shadow: -4px -3px 7px #000, 3px 3px 10px #000, 2px -4px 10px #000;
     color: black;
+    color: rgba(168, 248, 144, 0.744);
+    text-decoration: underline;
 }
 
 .disabled:hover {
@@ -65,11 +77,11 @@ text-shadow: -4px -3px 7px #ffffff, 3px 3px 10px #bb6262, 2px -4px 10px #fff;
         <div class="nav">
             <a href='https://varefox.github.io/ChimeraTools/'><button type='button' class="navbtn">Home</button></a></div>
         <div class='nav'>
-            <button type='menu' class='navbtn'>Tools <i class='fa fa-caret-down'></i></button>
+            <button type='menu' class='navbtn'> Tools <i class='fa fa-caret-down'></i></button>
             <div class='subNav'>
                 <a href='/ChimeraTools/petcalc.html'>Pet EXP Calculator</a>
-                <a href='/ChimeraTools/cookbook.html' class="disabled"><s>Cookbook</a></s>
-                <a href='#craftplan' class="disabled"><s>Artisan's Daybook</s>
+                <!-- <a href='/ChimeraTools/cookbook.html' class="disabled"><s>Cookbook</a></s> -->
+                <!-- <a href='#craftplan' class="disabled"><s>Artisan's Daybook</s> -->
                 </a>
             </div>
         </div>
@@ -80,17 +92,17 @@ text-shadow: -4px -3px 7px #ffffff, 3px 3px 10px #bb6262, 2px -4px 10px #fff;
                 <a href='guides/merfolk.html'>Merfolk</a>
                 <a href='guides/weapons.html'>Weapons & Runes</a>
                 <a href="guides/cultivation.html">Cultivation</a>
-        </div>
+            </div>
         </div>
         <div class='nav'>
-            <a href='tips.html'><button type='button' class='navbtn'>Tips for Tricks</button></a>
+            <a href='tips.html'><button type='button' class='navbtn'>Tricks</button></a>
         </div>
         <div class='nav'>
             <button type='button' class='navbtn'>Contact <i class='fa fa-caret-down'></i></button>
             <div class='subNav'>
                 <a href='mailto:varefox@gmail.com'><i class='fa fa-envelope'></i> varefox@gmail.com</a>
-                <a href='#'><iconify-icon icon='fa-brands:discord'></iconify-icon> Fox-- #2568</a>
-                <a href='#'>in game - Fox</a>
+                <a href='#'>Discord: varefox#2568</a>
+                <a href='#'>In game - Fox</a>
             </div>
         </div>
     </div>

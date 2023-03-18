@@ -1,7 +1,6 @@
 $(function () {
-
     $("#navcall").load("scripts/nav/navcall.html");
-
+    
     function activeNav() {
         var pgurl = window.location.href.substring(window.location.href.lastIndexOf("/") + 1);
         $("#nav ul li a").each(function () {

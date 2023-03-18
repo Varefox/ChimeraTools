@@ -19,29 +19,27 @@
     <br>
     <main>
         <section id="calculator-container">
-            <div class="main-content userInputForm">
+            <div class="input-wrapper">
                 <label for="levelGoal">
-                    <span class="question margin-left">What level do you want them to be?</span>
+                    <div class="question"><span>What level do you want them to be?</span></div>
                     <input class="smaller-font input border-warning box-shadow" id="levelGoal" onchange="limiter(this)"
                            oninput="calcExp()" onclick="this.select();" type="number" value="21" min="2"
                            onblur="if(this.value==''){this.value=2;}" required />
                 </label>
             </div>
-            <div class="main-content userInputForm">
-                <label for="level"><span class="question margin-left">
-                        Their current level?
-                    </span>
+            <div class="input-wrapper">
+                <label for="level"><div class="question"><span>Their current level?</span></div>
                     <input class="smaller-font input border-warning box-shadow" id="level" onchange="limiter(this)"
                            oninput="calcExp()" onclick="this.select();" type="number" value="1" min="1"
                            onblur="if(this.value==''){this.value=1;}" required />
                 </label>
             </div>
-            <div class="main-content userInputForm">
+            <div class="input-wrapper">
                 <label for="currentExp">
-                    <span class="question margin-left">How much EXP into the level are they? <sub>(not
-                            required)</sub></span>
+                    <div class="question"><span>How much EXP into the level are they? <sub>(not
+                            required)</sub></span></div>
                     <input class="smaller-font input border-warning box-shadow" id="currentExp" oninput="calcExp()"
-                           onclick="this.select();" type="number" value="0" min="0"
+                           onclick="this.select()" type="number" value="0" min="0"
                            onblur="if(this.value==''){this.value=0;calcExp()}" />
                 </label>
             </div>
@@ -68,27 +66,27 @@
             </div>
         </section>
         <section id="reverse-calculator-container">
-            <div class="main-content userInputForm">
+            <div class="input-wrapper">
                 <label for="currentPills">
-                    <span class="question margin-left">How many purity pills do you have?</span>
+                    <div class="question"><span>How many purity pills do you have?</span></div>
                     <input class="smaller-font input border-warning box-shadow" id="currentPills"
                            oninput="reverseCalc()"
                            onclick="this.select();" type="number" value="0" min="0" ;
                            onblur="if(this.value===''){this.value=0;reverseCalc()}" />
                 </label>
             </div>
-            <div class="main-content userInputForm">
+            <div class="input-wrapper">
                 <label for="reverseLevel">
-                    <span class="question margin-left">Their current level?</span>
+                    <div class="question"><span>Their current level?</span></div>
                     <input class="smaller-font input border-warning box-shadow" id="reverseLevel"
                            oninput="reverseCalc();"
-                           onclick="this.select();" type="number" value="1" min="1" max="70" ;
+                           onclick="this.select();" type="number" value="4" min="1" max="70" ;
                            onblur="if(this.value===''){this.value=0;reverseCalc()}" />
                 </label>
             </div>
-            <div class="main-content userInputForm">
+            <div class="input-wrapper">
                 <label for="reverseExp">
-                    <span class="question margin-left">Their current exp? (optional)</span>
+                    <div class="question"><span>Their current exp? (optional)</span></div>
                     <input class="smaller-font input border-warning box-shadow" id="reverseExp" oninput="reverseCalc()"
                            onclick="this.select();" type="number" value="0" min="0" ;
                            onblur="if(this.value===''){this.value=0;reverseCalc()}" />
@@ -97,10 +95,10 @@
             <div class="reverse-results-text-container">
                 <ul class="reverse-results-text">
                     <li>
-                        <span>
+                        <div class="question"><span>
                             After <output id="current-pills-text">0</output> purity pills, they'll be level <output
-                                    id="new-level-text">1</output>.
-                        </span>
+                                    id="new-level-text">4</output> and have <output id="exp-into-level">0</output> / 
+                        </span></div>
                     </li>
                 </ul>
             </div>
@@ -124,10 +122,10 @@
                         <span class="bold larger-font color-1">To 61:</span><br class="hiddenbr">
                         <span class="sm-padding-left">86 Purity, 1 Skycharge</span>
                     </li>
-                    </li>
                     <li class="sm-margin-top">
                         <span class="bold larger-font color-1">To 70:</span><br class="hiddenbr">
                         <span class="sm-padding-left">979 Purity, 2 Skycharge</span>
+                    </li>
                 </ul>
             </aside>
         </section>
@@ -162,11 +160,10 @@
             </p>
         </details>
     </main>
-    <div id="footeronpage">Portions of the content provided here,
+    <div id="disclosure"><p>Portions of the content provided here,
         including trademarks and copyrights and any other intellectual property rights, are owned or held by Proxima
         Beta Pte. Limited or its licensor(s) (“PBP”) and all rights in and to the same are reserved by PBP. This content
-        is not official PBP content and is not endorsed or approved by PBP.</div>
-    <hr>
+        is not official PBP content and is not endorsed or approved by PBP.</p></div>
 
 
 </body>
