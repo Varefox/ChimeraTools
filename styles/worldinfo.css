@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    margin-left: 20%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Mingzi', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-gap: 1rem;
+    margin-top: 1rem;
+    padding: 20px;
+}
+
+.grid-item {
+    background: linear-gradient(115deg, #496787 0%, #374659 50%, #28303e, #4e535b 100%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 1rem;
+    max-width: 38vw;
+    min-width: 18vw;
+    max-height: 79vh;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.grid-item h2 {
+    color: white;
+    margin-top: 2rem;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (min-width: 576px) {
+    .grid-item h3 {
+        display: inline-block;
+        width: 50%;
+        margin-top: 1rem;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+
+
+
+/* scrollbar styling */
+
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8), inset 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+
+/* List styling */
+
+ul li:nth-child(3n+1) {
+    background-color: #7978708d;
+}
+
+ul li:nth-child(3n+2) {
+    background-color: #646c69;
+}
+
+ul li:nth-child(3n) {
+    background-color: #796b51;
+}
+
+h3 {
+    color: #dedab88d;
+    font-weight: 500;
+    background-color: #000000;
+    text-indent: 24%;
+    border: solid 4px black;
+}
+
+/* Checkbox Styling */
+
+/* Custom checkbox styles */
+.custom-checkbox {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label::before {
+    background-color: #fff;
+    border: 2px solid transparent;
+}
+
+/* Button Styling */
+
+.book {
+    --text-base: 30deg, 75%, 40%;
+    --text-hover: 307deg, 72%, 86%;
+    --shadow-start: 52deg, 100%, 72%;
+    --shadow-end: 282deg, 90%, 50%;
+    --shadow-inner: 277deg, 90%, 62%;
+    all: unset;
+    color: hsla(var(--text-base), 1);
+    font: 700 1.125rem/1.2 Raleway, sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.15em;
+    margin-left: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    max-width: 100%;
+    width: 10em;
+    background: inherit;
+    background-clip: padding-box;
+    border: 5px solid hsla(var(--text-base), 1);
+    border-radius: 2em;
+    cursor: pointer;
+    position: relative;
+    transition: 0.25s ease-out;
+}
+
+.book::before,
+.book::after {
+    content: "";
+    border-radius: inherit;
+    transition: inherit;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.book::before {
+    inset: -0.2em;
+    z-index: -1;
+    background: linear-gradient(hsla(var(--shadow-start), 1), hsla(var(--shadow-end), 1));
+    filter: blur(1.2em) saturate(1.2);
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+    opacity: 0;
+}
+
+.book::after {
+    box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px rgba(255, 255, 255, 0.7), 1px 1px 0 4px #fff;
+    mix-blend-mode: overlay;
+    opacity: 0;
+}
+
+.book:hover,
+.book:focus {
+    color: hsla(var(--text-hover), 1);
+    border-color: transparent;
+    box-shadow: inset 0 1.4em 0 hsla(var(--shadow-inner), 0.1), inset 0 0 1.4em hsla(var(--shadow-inner), 0.32), 0 1px 1px hsla(var(--shadow-inner), 0.32);
+}
+
+.book:hover::before,
+.book:hover::after,
+.book:focus::before,
+.book:focus::after {
+    transform: none;
+    opacity: 1;
+
+}

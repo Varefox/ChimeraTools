@@ -12,7 +12,6 @@ p {
 
 
 
-
 .disclaimer {
     text-align: center;
 }
@@ -48,11 +47,6 @@ p {
     max-height: 25vw;
 }
 
-html {
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
-
 body {
     margin: 0;
 }
@@ -61,11 +55,6 @@ main {
     position: relative;
     margin: 0 5vw;
     background-color: rgb(255, 255, 255);
-    z-index: -1;
-}
-
-.decor {
-    background: linear-gradient(52deg, rgb(239, 235, 235), rgb(100, 96, 96))
 }
 
 article,
@@ -95,6 +84,7 @@ video {
 
 a {
     background-color: transparent
+            color: inherit;
 }
 
 a:active,
@@ -131,9 +121,7 @@ sup {
     top: -0.5em
 }
 
-.bs {
-    box-shadow: 14px 14px 10px black, -14px -14px 10px white;
-}
+
 
 hr {
     box-sizing: content-box;
@@ -211,7 +199,7 @@ html,
 body {
     font-family: "Mingzat", Verdana, sans-serif;
     font-size: calc(9px + 0.390625vw);
-    line-height: 1.2;
+    /* line-height: 1.2; */
 }
 
 
@@ -249,10 +237,6 @@ h6 {
     font-family: "Mingzat", Arial, sans-serif;
     font-weight: 400;
     margin: 10px 0
-}
-
-a {
-    color: inherit;
 }
 
 .noscroll {
@@ -688,7 +672,8 @@ a {
 }
 
 .animate-opacity {
-    animation: opac 0.8s
+    animation: opac 0.8s;
+    -webkit-animation: opac 0.8s;
 }
 
 @keyframes opac {

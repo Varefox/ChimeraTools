@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chimeraland World Info Checklist</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mingzat">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/ChimeraTools/styles/common.css" />
+    <link rel="stylesheet" href="/ChimeraTools/styles/worldinfo.css" />
+    <link rel="stylesheet" href="styles/template.css" />
+</head>
+<div id="navcall"></div>
+
+<body>
+    <main>
+        <div class="main">
+            <div class="row-bg">
+                <h1>Chimeraland World Info Checklist</h1>
+                <p>Use this checklist to easily reference what world info you've completed. -- Thank you Meagan for putting all this together!
+                </p>
+                <div class="grid-container fullpage">
+                    <div class="grid-item bs" id="books">
+                        <h2>Battles</h2>
+                        <button type="button" class="book" data-category="monsters">Monsters</button>
+                        <button type="button" class="book" data-category="myths">Myths</button>
+                        <button type="button" class="book" data-category="legends">Legends</button>
+                        <h2>Collect</h2>
+                        <button type="button" class="book" data-category="pets">Pets</button>
+                        <button type="button" class="book" data-category="attendants">Attendants</button>
+                        <button type="button" class="book" data-category="resources">Resources</button>
+                        <button id="show-completed-items">Show Completed Items</button>
+                    </div>
+                    <div class="grid-item bs long-item" id="focus">
+                        <h2 id="list-title"></h2>
+                        <ul id="list"></ul>
+                    </div>
+                    <div class="grid-item bs wide-item" id="list-container">
+                        <h2>Focus</h2>
+                        <button id="print-button">Print</button>
+                        <ul id="selected-items"></ul>
+                        <ul id="completed-items" style="display:none;"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="scripts/nav/jquerynav.js"></script>
+<script src="scripts/worldinfo.js"></script>
+
+
+</html>
