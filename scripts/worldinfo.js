@@ -1,5 +1,4 @@
 $.getScript('scripts/widata.js', function () {
-    console.log("widata.js script loaded");
 
     const state = {
         selectedItems: {}
@@ -26,7 +25,7 @@ $.getScript('scripts/widata.js', function () {
 
         return checkbox;
     };
-    
+
     const createCategoryTitle = (text) => {
         return $("<li>")
             .addClass("category-title")
@@ -44,53 +43,53 @@ $.getScript('scripts/widata.js', function () {
         return listItem;
     };
 
-const populateList = (data, category) => {
-    const list = $("#list");
-    list.empty();
+    const populateList = (data, category) => {
+        const list = $("#list");
+        list.empty();
 
-    const processItems = (items) => {
-        const categorizedItems = {};
+        const processItems = (items) => {
+            const categorizedItems = {};
 
-        items.forEach((item) => {
-            const itemCategory = getItemCategory(item);
-            if (!categorizedItems[itemCategory]) {
-                categorizedItems[itemCategory] = [];
-            }
-            categorizedItems[itemCategory].push(item);
-        });
-
-        for (let subcategory in categorizedItems) {
-            const categoryTitle = createCategoryTitle(subcategory);
-            list.append(categoryTitle);
-            categorizedItems[subcategory].forEach((item) => {
-                const listItem = createListItem(item, category);
-                list.append(listItem);
-            });
-        }
-    };
-
-    if (Array.isArray(data[category])) {
-        processItems(data[category]);
-    } else if (isObject(data[category])) {
-        if (category === 'attendants') {
-            processItems(attendants);
-        } else {
-            for (let key in data[category]) {
-                if (Array.isArray(data[category][key])) {
-                    data[category][key].forEach((item) => {
-                        const listItem = createListItem(item, category);
-                        list.append(listItem);
-                    });
+            items.forEach((item) => {
+                const itemCategory = getItemCategory(item);
+                if (!categorizedItems[itemCategory]) {
+                    categorizedItems[itemCategory] = [];
                 }
-                
+                categorizedItems[itemCategory].push(item);
+            });
+            
+            for (let subcategory in categorizedItems) {
+                const categoryTitle = createCategoryTitle(subcategory);
+                list.append(categoryTitle);
+                categorizedItems[subcategory].forEach((item) => {
+                    const listItem = createListItem(item, category);
+                    list.append(listItem);
+                });
             }
-        }
-    } else {
-        list.append($("<li>").text("No data available for this category."));
-    }
+        };
 
-    $("#list-title").text(category.charAt(0).toUpperCase() + category.slice(1));
-};
+        if (Array.isArray(data[category])) {
+            processItems(data[category]);
+        } else if (isObject(data[category])) {
+            if (category === 'attendants') {
+                processItems(attendants);
+            } else {
+                for (let key in data[category]) {
+                    if (Array.isArray(data[category][key])) {
+                        data[category][key].forEach((item) => {
+                            const listItem = createListItem(item, category);
+                            list.append(listItem);
+                        });
+                    }
+
+                }
+            }
+        } else {
+            list.append($("<li>").text("No data available for this category."));
+        }
+
+        $("#list-title").text(category.charAt(0).toUpperCase() + category.slice(1));
+    };
 
 
     const updateSelectedItems = (checkbox, item, category) => {
@@ -113,18 +112,17 @@ const populateList = (data, category) => {
                 selectedItemsList.find(`:contains(${item})`).remove();
             }
         }
+
         updateGrid3();
+        if (category === 'attendants') {
+            createMaterialsList();
+        }
     };
 
-    const getItemCategory = (item) => {
+    const getItemCategory = (item, category) => {
         if (item instanceof Attendant) {
             return item.village;
-        } else if (item.tier) {
-            return `Tier ${item.tier}`;
-        } else if (item.category) {
-            return item.category;
         } else {
-            return "Uncategorized";
         }
     };
 
@@ -157,7 +155,6 @@ const populateList = (data, category) => {
 
     (async () => {
         const data = await loadListData();
-        console.log("Data loaded:", data);
 
         $("button[data-category]").on("click", function () {
             const category = $(this).data("category");
@@ -174,3 +171,37 @@ const populateList = (data, category) => {
         });
     })();
 });
+
+
+// Create function that extracts attendant requirement data
+function createMaterialsList(attendants) {
+    let Materials = [];
+    let inkblackStones = 0;
+    let purpleStones = 0;
+
+    for (const attendant of attendants.name) {
+        // Find if the item already exists in the Materials list
+        let material = Materials.find(mat => mat.item === attendant.item);
+
+        if (material) {
+            // If the material exists, increase the quantity by 10
+            material.quantity += 10;
+        } else {
+            // If not, create a new material with the attendant's item and a quantity of 10
+            Materials.push({ item: attendant.item, quantity: 10 });
+        }
+
+        // Check if the attendant is from Octofish or Scaly village
+        if (attendant.village.includes("Octofish") || attendant.village.includes("Scaly")) {
+            purpleStones += attendant.amount;
+        } else {
+            inkblackStones += attendant.amount;
+        }
+    }
+
+    // Add inkblackStones and purpleStones to the Materials list
+    Materials.push({ item: "Inkblack Stones", quantity: inkblackStones });
+    Materials.push({ item: "Purple Stones", quantity: purpleStones });
+
+    return Materials;
+}

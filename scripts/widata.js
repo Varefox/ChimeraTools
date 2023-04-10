@@ -6,7 +6,7 @@ const monsters = {
             "Alligon",
             "Grougana",
             "Newt",
-            "Gripine",g--livere
+            "Gripine",
             "Snopine",
             "Lupine",
             "Beetlefly",
@@ -43,7 +43,7 @@ const myths = {
     ],
     "Young": [
         "Grooveswine",
-        "Serpent",
+        "Mamba",
         "Centaurvir",
         "Centaurmina",
         "Centaus",
@@ -275,6 +275,7 @@ const legends = {
     ]
 };
 
+
 const pets = {
     "Children": [
         "Crowned Quetzal",
@@ -286,7 +287,7 @@ const pets = {
     ],
     "Young": [
         "Grooveswine",
-        "Serpent",
+        "Mamba",
         "Centaurvir",
         "Centaurmina",
         "Centaus",
@@ -515,7 +516,7 @@ const attendants = [
     new Attendant("Ocylisha", "Octofish Village", "Sea-Buckthorn Mixed Juice", 200),
     new Attendant("Ocyaya", "Octofish Village", "Sea-Buckthorn Mixed Juice", 200),
     new Attendant("Ocyalla", "Octofish Village", "Sea-Buckthorn Mixed Juice", 200),
-    new Attendant("Ursberen", "Ursa Village (Southmount)", "	Fried Meat with Mushrooms x 10", 1000),
+    new Attendant("Ursberen", "Ursa Village (Southmount)", "Fried Meat with Mushrooms x 10", 1000),
     new Attendant("Ursalton", "Ursa Village (Southmount)", "Grilled Meat and Mushrooms", 200),
     new Attendant("Ursairi", "Ursa Village (Southmount)", "Grilled Meat and Mushrooms", 200),
     new Attendant("Urseydis", "Ursa Village (Southmount)", "Fried Meat with Mushrooms", 1000),

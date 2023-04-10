@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/ChimeraTools/styles/common.css" />
     <link rel="stylesheet" href="/ChimeraTools/styles/worldinfo.css" />
-    <link rel="stylesheet" href="styles/template.css" />
+    <link rel="stylesheet" href="/ChimeraTools/styles/template.css" />
 </head>
 <div id="navcall"></div>
 
@@ -20,6 +20,7 @@
         <div class="main">
             <div class="row-bg">
                 <h1>Chimeraland World Info Checklist</h1>
+                <p>Know what, fuck this site. Fuck this whole thing. Over it.</p>
                 <p>Use this checklist to easily reference what world info you've completed. -- Thank you Meagan and Dredd for data collection!
                     <button id="print-button">Print your selected info</button>
                 </p>
@@ -36,16 +37,20 @@
                     </div>
                     <div class="grid-item bs long-item" id="grid2-list">
                         <h2 id="list-title"></h2>
-                        <ul id="list">
-                        <h5 id="instructions">This world info checklist allows you to select world info entries and make a printable checklist out of them. It will also give you the locations of attendants and sum up the materials needed to recruit them.
+                        <h5 id="instructions">
+                            This world info checklist allows you to select world info entries and make a printable checklist out of them. It will also give you the locations of attendants and sum up the materials needed to recruit them.
                             <br><br>
-                            To begin, select a category on the left.</>
+                            To begin, select a category on the left.<h5/>
+                            <ul id="list">
                         </ul>
                     </div>
-                    <div class="grid-item bs wide-item" id="grid3-list">
+                    <div class="grid-item bs wide-item">
                         <h2>Info Tracker</h2>
+                    <div id="grid3-list">
                         <ul id="selected-items"></ul>
-                    </div>
+                    </div></div>
+                    <h3>Required Materials for Attendants</h3>
+                    <ul id="materials-list"></ul>
                 </div>
             </div>
         </div>
