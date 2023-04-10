@@ -54,6 +54,11 @@ body {
     font-weight: 600;
 }
 
+#print-button {
+    text-decoration: underline;
+    color: black;
+    padding: 10px;
+}
 
 
 ul {
@@ -78,10 +83,10 @@ li {
 
 .category-title {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-top: 10px;
     margin-bottom: 5px;
-    color: #333;
+    color: #AAA;
 }
 
 ul#list > li:not(.category-title) {
@@ -113,24 +118,19 @@ ul#list > li:not(.category-title) {
 
 /* List styling */
 
-ul li:nth-child(3n+1) {
-    background-color: #bab0668d;
-    border-top: 2px solid white;
+ul li:nth-child(2n+1) {
+    background-color: #32272e8d;
+    border-top: 2px solid rgb(0, 0, 0);
     border-bottom: 2px solid black;
 }
 
-ul li:nth-child(3n+2) {
-    border-top: 2px solid rgb(38, 109, 48);
+ul li:nth-child(2n) {
+    border-top: 2px solid rgb(0, 0, 0);
     border-bottom: 2px solid black;
-    background-color: #607c72;
-}
-ul li:nth-child(3n) {
-    border-top: 2px solid rgb(90, 38, 38);
-    border-bottom: 2px solid black;
-    background-color: #796b51;
+    background-color: #726b5e;
 }
 
-    li {
+li {
     font-size: 1.4rem;
     border: 4px solid black;
 }
@@ -153,6 +153,18 @@ h3 {
     margin-left: 12px;
 }
 
+h5 {
+    color: rgb(212, 200, 200);
+    line-height: 1.3em;
+    font-size: 1.5rem;
+    background: linear-gradient(70deg, #273e4f, #241d1d, #273e4f);
+    padding: 12px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
 
 /* Button Styling */
 
@@ -163,20 +175,20 @@ h3 {
     --shadow-end: 282deg, 90%, 50%;
     --shadow-inner: 277deg, 90%, 62%;
     all: unset;
-    color: hsla(var(--text-base), 1);
+    color: rgb(95, 213, 229);
     font: 700 1.125rem/1.2 Raleway, sans-serif;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-align: center;
     padding: 0.15em;
-    margin-left: 3em;
+    margin-left: 1em;
     margin-top: 0.5em;
     margin-bottom: 1em;
     max-width: 100%;
     width: 10em;
     background: inherit;
     background-clip: padding-box;
-    border: 5px solid hsla(var(--text-base), 1);
+    border: 5px solid rgb(167, 159, 159);
     border-radius: 2em;
     cursor: pointer;
     position: relative;
@@ -201,10 +213,11 @@ h3 {
     transform-origin: bottom;
     transform: scaleY(0.5);
     opacity: 0;
+    -webkit-filter: blur(1.2em) saturate(1.2);
 }
 
 .book::after {
-    box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px rgba(255, 255, 255, 0.7), 1px 1px 0 4px #fff;
+    box-shadow: inset 0 0 0 1px #1f1e1e, 0 0 0 4px rgba(244, 238, 158, 0.888), 1px 1px 0 4px #31cf92;
     mix-blend-mode: overlay;
     opacity: 0;
 }

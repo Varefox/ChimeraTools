@@ -6,7 +6,7 @@ const monsters = {
             "Alligon",
             "Grougana",
             "Newt",
-            "Gripine",
+            "Gripine",g--livere
             "Snopine",
             "Lupine",
             "Beetlefly",
@@ -494,6 +494,34 @@ class Attendant {
 }
 
 const attendants = [
+    new Attendant("Dorpsleier", "Noble Village (Centralmount)", "Spicy Red Goodfruit Broth", 1000),
+    new Attendant("Jagter", "Noble Village (Centralmount)", "Spicy Red Goodfruit Broth", 1000),
+    new Attendant("Wagler", "Noble Village (Centralmount)", "Spicy Red Goodfruit Broth", 1000),
+    new Attendant("Sjef", "Noble Village (Centralmount)", "Spicy Pepper Sauce", 200),
+    new Attendant("Aslaer", "Noble Village (Centralmount)", "Spicy Pepper Sauce", 200),
+    new Attendant("Boodskapper", "Noble Village (Centralmount)", "Spicy Pepper Sauce", 200),
+    new Attendant("Handelaar", "Noble Village (Centralmount)", "Spicy Pepper Sauce", 200),
+    new Attendant("Rhigou", "Rhino Village (Westmount)", "Scallion Meat Skewer", 1000),
+    new Attendant("Rhizhang", "Rhino Village (Westmount)", "Scallion Meat Skewer", 1000),
+    new Attendant("Rhipeng", "Rhino Village (Westmount)", "Scallion Meat Skewer", 1000),
+    new Attendant("Rhitian", "Rhino Village (Westmount)", "Fruity Meat Skewer", 200),
+    new Attendant("Rhijiu", "Rhino Village (Westmount)", "Fruity Meat Skewer", 200),
+    new Attendant("Rhishi", "Rhino Village (Westmount)", "Fruity Meat Skewer", 200),
+    new Attendant("Rhidag", "Rhino Village (Westmount)", "Fruity Meat Skewer", 200),
+    new Attendant("Ocyloga", "Octofish Village", "Cold Bodhi Soup", 1000),
+    new Attendant("Ocyakta", "Octofish Village", "Cold Bodhi Soup", 1000),
+    new Attendant("Ocyaska", "Octofish Village", "Cold Bodhi Soup", 1000),
+    new Attendant("Ocyooka", "Octofish Village", "Sea-Buckthorn Mixed Juice", 200),
+    new Attendant("Ocylisha", "Octofish Village", "Sea-Buckthorn Mixed Juice", 200),
+    new Attendant("Ocyaya", "Octofish Village", "Sea-Buckthorn Mixed Juice", 200),
+    new Attendant("Ocyalla", "Octofish Village", "Sea-Buckthorn Mixed Juice", 200),
+    new Attendant("Ursberen", "Ursa Village (Southmount)", "	Fried Meat with Mushrooms x 10", 1000),
+    new Attendant("Ursalton", "Ursa Village (Southmount)", "Grilled Meat and Mushrooms", 200),
+    new Attendant("Ursairi", "Ursa Village (Southmount)", "Grilled Meat and Mushrooms", 200),
+    new Attendant("Urseydis", "Ursa Village (Southmount)", "Fried Meat with Mushrooms", 1000),
+    new Attendant("Ursalfia", "Ursa Village (Southmount)", "Fried Meat with Mushrooms", 1000),
+    new Attendant("Ursotieno", "Ursa Village (Southmount)", "Grilled Meat and Mushrooms", 200),
+    new Attendant("Urstengiz", "Ursa Village (Southmount)", "Grilled Meat and Mushrooms", 200),
     new Attendant("Shamintrog", "Ape Village (Eastmount)", "Fruit Sauce", 1000),
     new Attendant("Sesuntrog", "Ape Village (Eastmount)", "Fruit Sauce", 1000),
     new Attendant("Jichotrog", "Ape Village (Eastmount)", "Fruit Sauce", 1000),
@@ -524,11 +552,18 @@ const attendants = [
     new Attendant("Saam-Aqui", "Winged Ones Village (Westmount)", "Wormy Soup", 200),
     new Attendant("Dragance", "Scaly Village (Southmount)", "Garlic Steaks", 1000),
     new Attendant("Dratag", "Scaly Village (Southmount)", "Garlic Steaks", 1000),
-    new Attendant("Dranor", "Scaly Village (Southmount)", "Garlic Steaks", 1000, 1000),
-    new Attendant("Dramore", "Scaly Village (Southmount)", "Braised Meat Cubes", 200, 1000),
-    new Attendant("Dralore", "Scaly Village (Southmount)", "Braised Meat Cubes", 200, 1000),
-    new Attendant("Draverse", "Scaly Village (Southmount)", "Braised Meat Cubes", 200, 1000),
-    new Attendant("Dravolen", "Scaly Village (Southmount)", "Braised Meat Cubes", 200, 1000),
+    new Attendant("Dranor", "Scaly Village (Southmount)", "Garlic Steaks", 1000),
+    new Attendant("Dramore", "Scaly Village (Southmount)", "Garlic Steaks", 1000),
+    new Attendant("Dralore", "Scaly Village (Southmount)", "Braised Meat Cubes", 200),
+    new Attendant("Draverse", "Scaly Village (Southmount)", "Braised Meat Cubes", 200),
+    new Attendant("Dravolen", "Scaly Village (Southmount)", "Braised Meat Cubes", 200),
+    new Attendant("Shanamo", "Marine Village (Southmount)", "Cantaloupe Slushie", 1000),
+    new Attendant("Shatoge", "Marine Village (Southmount)", "Cantaloupe Slushie", 1000),
+    new Attendant("Shamochi", "Marine Village (Southmount)", "Cantaloupe Slushie", 1000),
+    new Attendant("Shasei", "Marine Village (Southmount)", "Apple Slushie", 200),
+    new Attendant("Shamaru", "Marine Village (Southmount)", "Apple Slushie", 200),
+    new Attendant("Shaho", "Marine Village (Southmount)", "Apple Slushie", 200),
+    new Attendant("Shakuna", "Marine Village (Southmount)", "Apple Slushie", 200),
     new Attendant("Furoo", "Furungulate Village (Eastmount Main City)", "Seasonal Fried Veggies w/ Garlic", 1000),
     new Attendant("Findoo", "Furungulate Village (Eastmount Main City)", "Seasonal Fried Veggies w/ Garlic", 1000),
     new Attendant("Patoo", "Furungulate Village (Eastmount Main City)", "Seasonal Fried Veggies w/ Garlic", 1000),
@@ -543,13 +578,18 @@ const attendants = [
     new Attendant("Mantitell", "Kunze Village (Eastmount)", "Chargrilled Veggie Kabob", 200),
     new Attendant("Mantitrade", "Kunze Village (Eastmount)", "Chargrilled Veggie Kabob", 200),
     new Attendant("Mantieat", "Kunze Village (Eastmount)", "Chargrilled Veggie Kabob", 200),
+    new Attendant("Preshy Trader", "Fauxbun Village (Northmount)", "Crispy Roasted Core", 200),
+    new Attendant("Riser Priest", "Fauxbun Village (Northmount)", "Seer Fruit Soup", 200),
+    new Attendant("Lover Leader", "Fauxbun Village (Northmount)", "Sweet Fried Seasonal Dish", 1000),
+    new Attendant("Jader Guard", "Fauxbun Village (Northmount)", "Bright Green Stir-Fry", 1000),
     new Attendant("Kumiho", "Any Village", "200 Spirituality Fruit"),
     new Attendant("Lil Bel", "Mount Ockwei", "20 Dragon Fruit"),
     new Attendant("Pol", "Any Village", "Moonlight Feast Plate"),
+    new Attendant("Vulamblor", "Home", "TBA", 10000),
     new Attendant("Draros", "Home", "Buddha's Temptation", 50000)
-]
+];
 
-    async function loadListData() {
+async function loadListData() {
 
     const data = {
         monsters, myths, legends, pets, attendants

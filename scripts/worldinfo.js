@@ -44,55 +44,53 @@ $.getScript('scripts/widata.js', function () {
         return listItem;
     };
 
-    const populateList = (data, category) => {
-        const list = $("#list");
-        list.empty();
+const populateList = (data, category) => {
+    const list = $("#list");
+    list.empty();
 
-        const processItems = (items) => {
-            const categorizedItems = {};
+    const processItems = (items) => {
+        const categorizedItems = {};
 
-            items.forEach((item) => {
-                const itemCategory = getItemCategory(item);
-                if (!categorizedItems[itemCategory]) {
-                    categorizedItems[itemCategory] = [];
-                }
-                categorizedItems[itemCategory].push(item);
+        items.forEach((item) => {
+            const itemCategory = getItemCategory(item);
+            if (!categorizedItems[itemCategory]) {
+                categorizedItems[itemCategory] = [];
+            }
+            categorizedItems[itemCategory].push(item);
+        });
+
+        for (let subcategory in categorizedItems) {
+            const categoryTitle = createCategoryTitle(subcategory);
+            list.append(categoryTitle);
+            categorizedItems[subcategory].forEach((item) => {
+                const listItem = createListItem(item, category);
+                list.append(listItem);
             });
-
-            for (let subcategory in categorizedItems) {
-                const categoryTitle = createCategoryTitle(subcategory);
-                list.append(categoryTitle);
-                categorizedItems[subcategory].forEach((item) => {
-                    const listItem = createListItem(item, category);
-                    list.append(listItem);
-                });
-            }
-        };
-
-        if (Array.isArray(data[category])) {
-            processItems(data[category]);
-        } else if (isObject(data[category])) {
-            if (category === 'attendants') {
-                processItems(attendants);
-            } else {
-                for (let key in data[category]) {
-                    if (Array.isArray(data[category][key])) {
-                        data[category][key].forEach((item) => {
-                            const listItem = createListItem(item, category);
-                            list.append(listItem);
-                        });
-                    } else if (isObject(data[category][key]) && data[category][key].name) {
-                        const listItem = createListItem(data[category][key].name, category);
-                        list.append(listItem);
-                    }
-                }
-            }
-        } else {
-            list.append($("<li>").text("No data available for this category."));
         }
-
-        $("#list-title").text(category.charAt(0).toUpperCase() + category.slice(1));
     };
+
+    if (Array.isArray(data[category])) {
+        processItems(data[category]);
+    } else if (isObject(data[category])) {
+        if (category === 'attendants') {
+            processItems(attendants);
+        } else {
+            for (let key in data[category]) {
+                if (Array.isArray(data[category][key])) {
+                    data[category][key].forEach((item) => {
+                        const listItem = createListItem(item, category);
+                        list.append(listItem);
+                    });
+                }
+                
+            }
+        }
+    } else {
+        list.append($("<li>").text("No data available for this category."));
+    }
+
+    $("#list-title").text(category.charAt(0).toUpperCase() + category.slice(1));
+};
 
 
     const updateSelectedItems = (checkbox, item, category) => {
