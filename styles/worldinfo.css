@@ -21,30 +21,33 @@ body {
     font-family: 'Mingzi', sans-serif;
     background-color: #000000;
     color: #ffffff;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto;
     grid-gap: 1rem;
     margin-top: 1rem;
     padding: 20px;
 }
 
 .grid-item {
-    background: linear-gradient(115deg, #496787 0%, #374659 50%, #28303e, #4e535b 100%);
+    background: #1f364d;
     overflow-x: hidden;
     overflow-y: auto;
     padding: 1rem;
     max-width: 38vw;
     min-width: 18vw;
+    min-height: 74vh;
     max-height: 79vh;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    border-radius: 8px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    border-top-right-radius: 2%;
 }
 
 .grid-item h2 {
@@ -143,19 +146,16 @@ h3 {
 }
 
 
-/* Custom checkbox styles */
-.custom-checkbox {
-    position: relative;
-    margin-right: 7%;
-    margin-bottom: 4%;
-    margin-left: 12px;
+input[type=checkbox] {
+        position: relative;
+        cursor: pointer;
 }
 
 h5 {
     color: rgb(212, 200, 200);
     line-height: 1.3em;
     font-size: 1.5rem;
-    background: linear-gradient(70deg, #273e4f, #241d1d, #273e4f);
+    background: linear-gradient(70deg, #435c6f, #ce5151, #276a9d);
     padding: 12px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -173,8 +173,8 @@ h5 {
     --shadow-end: 282deg, 90%, 50%;
     --shadow-inner: 277deg, 90%, 62%;
     all: unset;
-    color: rgb(95, 213, 229);
-    font: 700 1.125rem/1.2 Raleway, sans-serif;
+    color: rgb(38, 222, 118);
+    font: 500 1.125rem/1.2 "Fira Code", sans-serif;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-align: center;
@@ -182,7 +182,7 @@ h5 {
     margin-left: 1em;
     margin-top: 0.5em;
     margin-bottom: 1em;
-    max-width: 100%;
+    max-width: 26%;
     width: 10em;
     background: inherit;
     background-clip: padding-box;
@@ -190,7 +190,7 @@ h5 {
     border-radius: 2em;
     cursor: pointer;
     position: relative;
-    transition: 0.25s ease-out;
+    transition: 0.65s ease-out;
 }
 
 .book::before,
@@ -215,7 +215,7 @@ h5 {
 }
 
 .book::after {
-    box-shadow: inset 0 0 0 1px #1f1e1e, 0 0 0 4px rgba(244, 238, 158, 0.888), 1px 1px 0 4px #31cf92;
+    box-shadow: inset 0 0 0 1px #1f1e1e, 0 0 0 4px rgba(106, 236, 6, 0.888), 1px 1px 0 4px #dcf055;
     mix-blend-mode: overlay;
     opacity: 0;
 }
@@ -234,4 +234,60 @@ h5 {
     transform: none;
     opacity: 1;
 
+}
+
+
+
+
+/* Responsive Web Design */
+
+
+@media (max-width: 1024px) {
+    p {
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    p {
+        margin-left: 10%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        /* Add this line */
+    }
+
+    #grid3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        margin-left: 5%;
+        font-size: 1rem;
+    }
+
+    .grid-item {
+        max-width: 95vw;
+        min-width: 95vw;
+        max-height: 79vh;
+    }
+
+    .grid-item h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }

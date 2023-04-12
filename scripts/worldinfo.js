@@ -47,49 +47,29 @@ $.getScript('scripts/widata.js', function () {
         const list = $("#list");
         list.empty();
 
-        const processItems = (items) => {
-            const categorizedItems = {};
-
-            items.forEach((item) => {
-                const itemCategory = getItemCategory(item);
-                if (!categorizedItems[itemCategory]) {
-                    categorizedItems[itemCategory] = [];
+        if (isObject(data[category])) {
+            for (let key in data[category]) {
+                if (Array.isArray(data[category][key])) {
+                    const categoryTitle = createCategoryTitle(key);
+                    list.append(categoryTitle);
+                    data[category][key].forEach((item) => {
+                        const listItem = createListItem(item, category);
+                        list.append(listItem);
+                    });
                 }
-                categorizedItems[itemCategory].push(item);
+            }
+        } else if (category === 'attendants') {
+            data.attendants.forEach((item) => {
+                const listItem = createListItem(item, category);
+                list.append(listItem);
             });
-            
-            for (let subcategory in categorizedItems) {
-                const categoryTitle = createCategoryTitle(subcategory);
-                list.append(categoryTitle);
-                categorizedItems[subcategory].forEach((item) => {
-                    const listItem = createListItem(item, category);
-                    list.append(listItem);
-                });
-            }
-        };
-
-        if (Array.isArray(data[category])) {
-            processItems(data[category]);
-        } else if (isObject(data[category])) {
-            if (category === 'attendants') {
-                processItems(attendants);
-            } else {
-                for (let key in data[category]) {
-                    if (Array.isArray(data[category][key])) {
-                        data[category][key].forEach((item) => {
-                            const listItem = createListItem(item, category);
-                            list.append(listItem);
-                        });
-                    }
-
-                }
-            }
         } else {
             list.append($("<li>").text("No data available for this category."));
         }
-
         $("#list-title").text(category.charAt(0).toUpperCase() + category.slice(1));
     };
+
+
 
 
     const updateSelectedItems = (checkbox, item, category) => {
@@ -123,28 +103,19 @@ $.getScript('scripts/widata.js', function () {
         if (item instanceof Attendant) {
             return item.village;
         } else {
+            const keys = Object.keys;
         }
     };
 
     const updateGrid3 = () => {
         const grid3 = $(listSelectors.grid3);
         grid3.empty();
-        const categorizedItems = {};
-
+        
         for (let category in state.selectedItems) {
-            state.selectedItems[category].forEach((item) => {
-                const itemCategory = getItemCategory(item);
-                if (!categorizedItems[itemCategory]) {
-                    categorizedItems[itemCategory] = [];
-                }
-                categorizedItems[itemCategory].push(item);
-            });
-        }
-
-        for (let category in categorizedItems) {
             const categoryTitle = $("<li>").addClass("category-title").text(category);
             grid3.append(categoryTitle);
-            categorizedItems[category].forEach((item) => {
+            
+            state.selectedItems[category].forEach((item) => {
                 const itemName = item instanceof Attendant ? item.name : item;
                 const listItem = $("<li>").text(itemName);
                 grid3.append(listItem);
@@ -170,38 +141,74 @@ $.getScript('scripts/widata.js', function () {
             document.body.innerHTML = originalContents;
         });
     })();
-});
 
+    function updateGrid4(materials) {
+        const grid4 = $("#materials-list");
+        grid4.empty();
 
-// Create function that extracts attendant requirement data
-function createMaterialsList(attendants) {
-    let Materials = [];
-    let inkblackStones = 0;
-    let purpleStones = 0;
-
-    for (const attendant of attendants.name) {
-        // Find if the item already exists in the Materials list
-        let material = Materials.find(mat => mat.item === attendant.item);
-
-        if (material) {
-            // If the material exists, increase the quantity by 10
-            material.quantity += 10;
-        } else {
-            // If not, create a new material with the attendant's item and a quantity of 10
-            Materials.push({ item: attendant.item, quantity: 10 });
-        }
-
-        // Check if the attendant is from Octofish or Scaly village
-        if (attendant.village.includes("Octofish") || attendant.village.includes("Scaly")) {
-            purpleStones += attendant.amount;
-        } else {
-            inkblackStones += attendant.amount;
+        for (const material of materials) {
+            const listItem = $("<li>").text(`${material.quantity} ${material.item}`);
+            grid4.append(listItem);
         }
     }
 
-    // Add inkblackStones and purpleStones to the Materials list
-    Materials.push({ item: "Inkblack Stones", quantity: inkblackStones });
-    Materials.push({ item: "Purple Stones", quantity: purpleStones });
+    // Create function that extracts attendant requirement data
+    function sortMaterialsList(materials) {
+        return materials.sort((a, b) => {
+            if (a.item === "Inkblack Stones" || a.item === "Purple Stones") {
+                return 1;
+            }
+            if (b.item === "Inkblack Stones" || b.item === "Purple Stones") {
+                return -1;
+            }
+            return a.item.localeCompare(b.item);
+        });
+    }
 
-    return Materials;
-}
+    function createMaterialsList(grid3) {
+        const attendants = state.selectedItems.attendants;
+        if (!attendants) {
+            // No attendants are selected, so clear the grid4 list and return
+            updateGrid4([]);
+            return;
+        }
+
+        let materials = [];
+        let inkblackStones = 0;
+        let purpleStones = 0;
+
+        for (const attendant of attendants) {
+            // Find if the item already exists in the materials list
+            let material = materials.find(mat => mat.item === attendant.item);
+
+            if (material) {
+                // If the material exists, increase the quantity by 10
+                material.quantity += 10;
+            } else {
+                // If not, create a new material with the attendant's item and a quantity of 10
+                materials.push({ item: attendant.item, quantity: 10 });
+            }
+
+            // Check if the attendant is from Octofish or Scaly village
+            if (attendant.village.includes("Octofish") || attendant.village.includes("Scaly")) {
+                purpleStones += attendant.amount;
+            } else {
+                inkblackStones += attendant.amount;
+            }
+        }
+
+        // Add inkblackStones and purpleStones to the materials list if they are greater than 0
+        if (inkblackStones > 0) {
+            materials.push({ item: "Inkblack Stones", quantity: inkblackStones });
+        }
+        if (purpleStones > 0) {
+            materials.push({ item: "Purple Stones", quantity: purpleStones });
+        }
+
+        // Sort the materials list
+        const sortedMaterials = sortMaterialsList(materials);
+
+        // Update grid4 with the sorted materials list
+        updateGrid4(sortedMaterials);
+    }
+})

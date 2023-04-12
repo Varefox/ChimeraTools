@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chimeraland World Info Checklist</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" />
@@ -20,12 +18,11 @@
         <div class="main">
             <div class="row-bg">
                 <h1>Chimeraland World Info Checklist</h1>
-                <p>Know what, fuck this site. Fuck this whole thing. Over it.</p>
                 <p>Use this checklist to easily reference what world info you've completed. -- Thank you Meagan and Dredd for data collection!
                     <button id="print-button">Print your selected info</button>
                 </p>
                 <div class="grid-container fullpage">
-                    <div class="grid-item bs" id="grid1-list">
+                        <div class="grid-item bs long-item" id="grid2-list">
                         <h2>Battles</h2>
                         <button type="button" class="book" id="monsters" data-category="monsters">Monsters</button>
                         <button type="button" class="book" id="myths" data-category="myths">Myths</button>
@@ -34,23 +31,23 @@
                         <button type="button" class="book" id="pets" data-category="pets">Pets</button>
                         <button type="button" class="book" id="attendants" data-category="attendants">Attendants</button>
                         <button type="button" class="book" id="resources" data-category="resources">Resources</button>
-                    </div>
-                    <div class="grid-item bs long-item" id="grid2-list">
                         <h2 id="list-title"></h2>
-                        <h5 id="instructions">
-                            This world info checklist allows you to select world info entries and make a printable checklist out of them. It will also give you the locations of attendants and sum up the materials needed to recruit them.
-                            <br><br>
-                            To begin, select a category on the left.<h5/>
                             <ul id="list">
                         </ul>
                     </div>
-                    <div class="grid-item bs wide-item">
+                    <div class="grid-item bs wide-item" id="grid3">
                         <h2>Info Tracker</h2>
                     <div id="grid3-list">
                         <ul id="selected-items"></ul>
                     </div></div>
-                    <h3>Required Materials for Attendants</h3>
-                    <ul id="materials-list"></ul>
+                    <div class="bs" id="grid4">
+                        <h3>Required Materials for Attendants</h3>
+                        <div id="grid4-list">
+                            <ul id ="materials-list">
+
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
